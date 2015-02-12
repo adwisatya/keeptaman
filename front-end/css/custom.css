@@ -1,0 +1,157 @@
+body {
+	color: #2f7e61;
+}
+
+hr.star-light:after, hr.star-primary:after  {
+	background-color: #2f7e61;
+}
+
+hr.star-primary {
+	border-color: #2f7e61;
+}
+
+hr.star-primary:after {
+	color: #fff;
+}
+
+.navbar-default{
+	background-color: #90b973;
+}
+
+header {
+	background-color: #fff;
+}
+
+li {
+	display: inline-block;
+}
+
+#leaf {
+	height: 50%;
+	width: 50%;
+}
+
+.btn-success {
+	background-color: #2f7e61;
+}
+
+header img {
+	margin: 0 auto 0;
+}
+
+.map {
+	float: left;
+	margin-left: 150px;
+}
+
+#location {
+	width: 100px;
+	height: 500px;
+}
+
+#icon-location {
+	width: 20%;
+	height: 10%;
+}
+
+.tes {
+	text-align: right;
+}
+
+#img-responsive {
+	width: 500px;
+	height: 400px;
+}
+
+section.success {
+	background-color: #c9e6b6;
+	/*height: 800px;*/
+}
+
+footer .footer-above, footer .footer-below {
+	background-color:#90b973;
+}
+
+.close:hover {
+	color: #2f7e61;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+.list-taman {
+	float: left;
+	/*margin-top: 80px;*/
+	margin-left: 60px;
+}
+
+.list-taman:hover {
+	color: #90b973;
+}
+
+#gambar-statistik1, #gambar-statistik2, #gambar-statistik3, #gambar-statistik4, #gambar-statistik5, #gambar-statistik6, #gambar-statistik7, #gambar-statistik8 {
+	padding-top: 40px;
+}
+
+#taman1, #taman2, #taman3, #taman4, #taman5, #taman6, #taman7, #taman8, #taman9, #taman10, #taman11, #taman12, #taman13, #taman14, #taman15, #taman16{
+	border: 1px;
+	border-color: #2f7e61;
+	background-color: #90b973;
+	font-size: 16px;
+	color: #fff;
+	padding: 8px;
+	cursor: pointer;
+	font-family: helvetica;
+}
+
+#taman1 {
+	background-color: #2f7e61;
+}
+
+/*p#nama-taman {
+	font-size: 16px;
+	border: 1px;
+	border-color: #2f7e61;
+	background-color: #2f7e61;
+	color: #fff;
+	padding: 8px;
+	cursor: pointer;
+	font-family: helvetica;
+
+}*/
+
+#gambar-statistik2, #gambar-statistik3, #gambar-statistik4, #gambar-statistik5, #gambar-statistik6, #gambar-statistik7, #gambar-statistik8, #gambar-statistik9, #gambar-statistik10, #gambar-statistik11, #gambar-statistik12, #gambar-statistik13, #gambar-statistik14, #gambar-statistik15, #gambar-statistik16 {
+	height: 50%;
+	width: 50%;
+	display: none;
+}
+
+#gambar-statistik1 {
+	height: 50%;
+	width: 50%;
+}
+
+#nama-taman {
+	width: 300px;
+	height: 400px;
+	overflow-y: scroll;
+	margin-top: 40px;
+	cursor: pointer;
+	/*height: 600px;*/
+}
+
+::-webkit-scrollbar {
+   width: 15px;
+}
+
+::-webkit-scrollbar-track {
+   -webkit-box-shadow: inset 0 0 6px #2f7e61;
+   border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+   border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px #2f7e61;
+   background-color: #2f7e61; 
+}
