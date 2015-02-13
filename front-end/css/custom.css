@@ -2,6 +2,19 @@ body {
 	color: #2f7e61;
 }
 
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+	background-color: #2f7e61;
+}
+
+a, a:hover, a:focus, a:active, a.active {
+	outline: 0;
+	color: #2f7e61;
+}
+
+a {
+	color: #2f7e61;
+}
+
 hr.star-light:after, hr.star-primary:after  {
 	background-color: #2f7e61;
 }
@@ -90,12 +103,21 @@ a:link {
 	color: #90b973;
 }
 
-#gambar-statistik1, #gambar-statistik2, #gambar-statistik3, #gambar-statistik4, #gambar-statistik5, #gambar-statistik6, #gambar-statistik7, #gambar-statistik8 {
+/*#gambar-statistik1, #gambar-statistik2, #gambar-statistik3, #gambar-statistik4, #gambar-statistik5, #gambar-statistik6, #gambar-statistik7, #gambar-statistik8, #gambar-statistik9, #gambar-statistik10, #gambar-statistik11, #gambar-statistik12, #gambar-statistik13, #gambar-statistik14, #gambar-statistik15, #gambar-statistik16 {
+	padding-top: 40px;
+}*/
+
+.list-taman img {
 	padding-top: 40px;
 }
 
-#taman1, #taman2, #taman3, #taman4, #taman5, #taman6, #taman7, #taman8, #taman9, #taman10, #taman11, #taman12, #taman13, #taman14, #taman15, #taman16{
-	border: 1px;
+/*#gambar-statistik {
+	padding-top: 40px;
+}*/
+
+
+.list-taman p {/*#taman1, #taman2, #taman3, #taman4, #taman5, #taman6, #taman7, #taman8, #taman9, #taman10, #taman11, #taman12, #taman13, #taman14, #taman15, #taman16{*/
+	border: 5px;
 	border-color: #2f7e61;
 	background-color: #90b973;
 	font-size: 16px;
@@ -109,17 +131,9 @@ a:link {
 	background-color: #2f7e61;
 }
 
-/*p#nama-taman {
-	font-size: 16px;
-	border: 1px;
-	border-color: #2f7e61;
-	background-color: #2f7e61;
-	color: #fff;
-	padding: 8px;
-	cursor: pointer;
-	font-family: helvetica;
-
-}*/
+#taman16 {
+	margin-bottom: 0;
+}
 
 #gambar-statistik2, #gambar-statistik3, #gambar-statistik4, #gambar-statistik5, #gambar-statistik6, #gambar-statistik7, #gambar-statistik8, #gambar-statistik9, #gambar-statistik10, #gambar-statistik11, #gambar-statistik12, #gambar-statistik13, #gambar-statistik14, #gambar-statistik15, #gambar-statistik16 {
 	height: 50%;
@@ -138,6 +152,7 @@ a:link {
 	overflow-y: scroll;
 	margin-top: 40px;
 	cursor: pointer;
+	margin-bottom: 0;
 	/*height: 600px;*/
 }
 
@@ -147,11 +162,94 @@ a:link {
 
 ::-webkit-scrollbar-track {
    -webkit-box-shadow: inset 0 0 6px #2f7e61;
-   border-radius: 10px;
+   border-radius: 0px;
 }
 
 ::-webkit-scrollbar-thumb {
-   border-radius: 10px;
+   border-radius: 0px;
   -webkit-box-shadow: inset 0 0 6px #2f7e61;
    background-color: #2f7e61; 
+}
+
+#lokasi-taman {
+	color: #000;
+	cursor: pointer;
+}
+
+/* ADD PENGADUAN */
+.form-control1 {
+	display: block;
+	width: 100%;
+	height: 200px;
+	padding: 10px 15px;
+	font-size: 15px;
+	line-height: 1.42857143;
+	color: #2f7e61;
+	background-color: #ffffff;
+	background-image: none;
+	border: 1px solid #dce4ec;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.form-control2 {
+	display: block;
+	width: 100%;
+	height: 43px;
+	padding: 5px 15px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #2c3e50;
+	background-color: #ffffff;
+	background-image: none;
+	/*border: 1px solid #dce4ec;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;*/
+}
+
+.form-control1, input {
+	border-width: 2px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+#pengaduan {
+	float: left;
+	margin-left: 15px;
+	margin-top: 40px;
+	font-size: 1.5em;
+}
+
+#gambar {
+	color: #2f7e61;
+	font-size: 1.5em;
+	float: left;
+	padding: 20px 15px;
+}
+
+.btn-default1 {
+color: #787878;
+background-color: #fff;
+}
+
+.btn-default1:hover {
+	color: #2f7e61;
+}
+
+/* daftar pengaduan */
+table {
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid black;
+    color: #000;
 }

@@ -22,7 +22,11 @@ a:focus,
 a:active,
 a.active {
     outline: 0;
+<<<<<<< HEAD
+    color: #2f7e61;
+=======
     color: #18bc9c;
+>>>>>>> c8fafa32e82cdf6b8ef8ecd29d2aab8186047e90
 }
 
 h1,
@@ -63,7 +67,11 @@ hr.star-light {
 
 hr.star-light:after {
     color: #fff;
+<<<<<<< HEAD
+    background-color: #2f7e61;
+=======
     background-color: #18bc9c;
+>>>>>>> c8fafa32e82cdf6b8ef8ecd29d2aab8186047e90
 }
 
 hr.star-primary {
@@ -82,7 +90,11 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: #fff;
+<<<<<<< HEAD
+    background: #2f7e61;
+=======
     background: #18bc9c;
+>>>>>>> c8fafa32e82cdf6b8ef8ecd29d2aab8186047e90
 }
 
 header .container {
@@ -181,7 +193,11 @@ section h2 {
 
 section.success {
     color: #fff;
+<<<<<<< HEAD
+    background: #2f7e61;
+=======
     background: #18bc9c;
+>>>>>>> c8fafa32e82cdf6b8ef8ecd29d2aab8186047e90
 }
 
 @media(max-width:767px) {
@@ -265,7 +281,11 @@ section.success {
 .btn-outline:active,
 .btn-outline.active {
     border: solid 2px #fff;
+<<<<<<< HEAD
+    color: #2f7e61;
+=======
     color: #18bc9c;
+>>>>>>> c8fafa32e82cdf6b8ef8ecd29d2aab8186047e90
     background: #fff;
 }
 
@@ -318,7 +338,11 @@ section.success {
 }
 
 .floating-label-form-group-with-focus label {
+<<<<<<< HEAD
+    color: #2f7e61;
+=======
     color: #18bc9c;
+>>>>>>> c8fafa32e82cdf6b8ef8ecd29d2aab8186047e90
 }
 
 form .row:first-child .floating-label-form-group {
