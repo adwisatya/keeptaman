@@ -85,20 +85,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <table>
-                        <tr>
+                    <table align="center"  cellpadding="10">
+                        <tr cellpadding="10">
                             <th>No</th>
                             <th>Nama</th>
                             <th>Email</th>
                             <th>Subjek</th>
                             <th>Pengaduan</th>
                             <th>Status</th>
+							<th>Aksi</th>
                         </tr>
-                        <!--<tr>
-                            <td>
-                                <input type="checkbox" name="report_myTextEditBox" value="checked">
-                            </td>
-                         </tr>-->
+						<tr>
+							<?php
+								include("../admin/pengaduan.php");
+							?>
+						</tr>
                     </table>
                     
                     <!--div class="intro-text">
