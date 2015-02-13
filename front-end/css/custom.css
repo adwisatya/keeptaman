@@ -246,10 +246,23 @@ background-color: #fff;
 
 /* daftar pengaduan */
 table {
-    border-collapse: collapse;
+	margin-top: 50px;
 }
 
-table, td, th {
-    border: 1px solid black;
-    color: #000;
+.table {
+	color: #000;
+}
+
+th {
+	text-align: center;
+	background-color: #c9e6b6;
+}
+
+header h2 {
+	color: #2f7e61;
+	font-size: 3em;
+}
+
+.go {
+	float: right;
 }
