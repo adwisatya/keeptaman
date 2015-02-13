@@ -6,10 +6,10 @@
 					break;
 			case 1 : $data = mysql_query("DELETE FROM pihak_berwenang WHERE `id_lembaga` = '$id_lembaga'");
 					break;
-			case 2 : $data = mysql_query("UPDATE pihak_berwenang `nama_lembaga`='$nama_lembaga', `email`='$email', `no_telepon`='$no_telepon' WHERE `id_lembaga` = $id_lembaga");
+			case 2 : $data = mysql_query("UPDATE pihak_berwenang SET `nama_lembaga`='$nama_lembaga', `email`='$email', `no_telepon`='$no_telepon' WHERE `id_lembaga` = $id_lembaga");
 					break;
 			default:
-				echo "$command not found";
+				echo "command not found";
 				break;
 		}
 	}else{
