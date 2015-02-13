@@ -182,7 +182,11 @@
             // ---------------------------------------------------------
             //                                                     EMAIL
             // ---------------------------------------------------------
+<<<<<<< HEAD
+            /*if ($this.attr("type") !== undefined && $this.attr("type").toLowerCase() === "email") {
+=======
             if ($this.attr("type") !== undefined && $this.attr("type").toLowerCase() === "email") {
+>>>>>>> c8fafa32e82cdf6b8ef8ecd29d2aab8186047e90
               message = "Not a valid email address<!-- data-validator-validemail-message to override -->";
               if ($this.data("validationValidemailMessage")) {
                 message = $this.data("validationValidemailMessage");
@@ -190,7 +194,11 @@
                 message = $this.data("validationEmailMessage");
               }
               $this.data("validationValidemailMessage", message);
+<<<<<<< HEAD
+            }*/
+=======
             }
+>>>>>>> c8fafa32e82cdf6b8ef8ecd29d2aab8186047e90
             // ---------------------------------------------------------
             //                                                MINCHECKED
             // ---------------------------------------------------------

@@ -85,14 +85,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="map" id="img-responsive"></div>
-                    <!--<img class="img-responsive" src="img/profile.png" id="map">-->
-                    <div class="map" id="location">
-                        <ul class="navbar-right">
-                            <li><img src="img/location.png" id="icon-location"></li>
-                            <li><a href="#add-pengaduan"class="portfolio-link" data-toggle="modal">Lokasi Taman</a></li>
-                        </ul>
-                   </div>    
+                    <table>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama</th>
+                            <th>Email</th>
+                            <th>Subjek</th>
+                            <th>Pengaduan</th>
+                            <th>Status</th>
+                        </tr>
+                        <!--<tr>
+                            <td>
+                                <input type="checkbox" name="report_myTextEditBox" value="checked">
+                            </td>
+                         </tr>-->
+                    </table>
                     
                     <!--div class="intro-text">
                         <!--<span class="name">Start Bootstrap</span>
@@ -107,12 +114,12 @@
     <!--Pengaduan -->
     <section id="portfolio">
         <div class="container">
-            <!--<div class="row">
+            <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Pengaduan</h2>
                     <hr class="star-primary">
                 </div>
-            </div>-->
+            </div>
             <div class="row">
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
@@ -253,7 +260,7 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
                     <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                    <form name="sentMessage" action="page-admin.html" id="contactForm" novalidate>
+                    <form name="sentMessage" id="contactForm" novalidate>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Username</label>
@@ -273,7 +280,7 @@
                         <div id="success"></div>
                         <div class="row">
                             <div class="form-group col-xs-12">
-                                <input type="submit" class="btn btn-success btn-lg" value="Login">
+                                <button type="submit" class="btn btn-success btn-lg">Login</button>
                             </div>
                         </div> 
                     </form>
@@ -639,7 +646,7 @@
                                     </strong>
                                 </li>
                             </ul>-->
-                            <button type="button" class="btn btn-default1" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
                 </div>
