@@ -2,11 +2,11 @@
 	include("../connect.php");
 	
 	if(isset($_GET['command'])){
-		$id_taman = 123;
-		$nama_taman = "adwisatya";
-		$alamat	=	"dsadsa";
-		$geolokasi = "123213";
-		$username_admin = "admin";
+		$id_taman = $_POST['id_taman'];
+		$nama_taman = $_POST['nama'];
+		$alamat	=	$_POST['alamat'];
+		$geolokasi = $_POST['geolokasi'];
+		$username_admin = $_POST['idadmin'];
 		switch($_GET['command']){
 			case 0 : $data = mysql_query("INSERT INTO taman (`id_taman`, `nama_taman`, `alamat`, `geolokasi`, `username_admin`) VALUES ('$id_taman', '$nama_taman','$alamat','$geolokasi','$username_admin');");
 					break;
