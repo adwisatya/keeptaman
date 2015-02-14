@@ -2,10 +2,10 @@
 	include("../connect.php");
 	
 	if(isset($_GET['command'])){
-		$username = "admin";
+		/*$username = "admin";
 		$password  = "adminbaru";
 		$name = "administrator2";
-		$email = "test";
+		$email = "test";*/
 		switch($_GET['command']){
 			case 0 : $data = mysql_query("INSERT INTO admin (`username`, `password`, `name`, `email`) VALUES ('$username', '$password', '$name', '$email');");
 					break;

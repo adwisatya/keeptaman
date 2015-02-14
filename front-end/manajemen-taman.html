@@ -85,64 +85,80 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Pengaduan</h2>
+                    <h2>Manajemen Taman</h2>
                     <hr class="star-primary">
                 </div>
                 <div class="col-lg-12">
                     <table class="table table-hover table-bordered">
                         <tr>
-                            <th>No</th>
-                            <th>Nama</th>
-                            <th>Email</th>
-                            <th>Subjek</th>
-                            <th>Pengaduan</th>
-                            <th>Status</th>
+                            <th>Id</th>
+                            <th>Nama Taman</th>
+                            <th>Alamat</th>
+                            <th>Geolokasi</th>
+                            <th></th>
                             <th></th>
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td>Windy</td>
-                            <td>windyamelia94@yahoo.com</td>
-                            <td>judul</td>
-                            <td>alallalala</td>
-                            <td>pending</td>
+                            <td>Taman A</td>
+                            <td>jalan A</td>
+                            <td>00001111</td>
                             <td>
-                                <input type="checkbox" name="report_myTextEditBox" value="checked">
+                                <input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Edit">
+                            </td>
+                            <td>
+                                 <input type="Submit" class="btn btn-primary btn-sm btn-primary delete" value="Delete">
+                            </td>
+                         </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Taman A</td>
+                            <td>jalan A</td>
+                            <td>00001111</td>
+                            <td>
+                                <input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Edit">
+                            </td>
+                            <td>
+                                 <input type="Submit" class="btn btn-primary btn-sm btn-primary delete" value="Delete">
                             </td>
                          </tr>
                          <tr>
                             <td>1</td>
-                            <td>Windy</td>
-                            <td>windyamelia94@yahoo.com</td>
-                            <td>judul</td>
-                            <td>alallalala</td>
-                            <td>pending</td>
+                            <td>Taman A</td>
+                            <td>jalan A</td>
+                            <td>00001111</td>
                             <td>
-                                <input type="checkbox" name="report_myTextEditBox" value="checked">
+                                <input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Edit">
+                            </td>
+                            <td>
+                                 <input type="Submit" class="btn btn-primary btn-sm btn-primary delete" value="Delete">
                             </td>
                          </tr>
-                         <tr>
-                            <td>1</td>
-                            <td>Windy</td>
-                            <td>windyamelia94@yahoo.com</td>
-                            <td>judul</td>
-                            <td>alallalala</td>
-                            <td>pending</td>
+                         <tr name="tambah_taman" style="display">
+                            <td></td>
+                            <td><input type="text" id="nama_taman" value="aryya"></td>
+                            <td><input type="text" id="alamat"></td>
+                            <td><input type="text" id="geolokasi"></td>
                             <td>
-                                <input type="checkbox" name="report_myTextEditBox" value="checked">
+								<select id="idadmin">
+									<option value="admin">ss</option>
+								</select>
+							</td>
+							<td>
+                                <input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="tambah" onClick="initPost();">
                             </td>
-                         </tr>
+                        </tr>
                     </table>
                     <div class="row">
                         <form class="form-inline" id="form-button">
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                         <select class="form-control input-sm">
                             <option value="volvo">Approve</option>
                             <option value="saab">Ignore</option>
                         </select>
-                        </div>
+                        </div> -->
                         <div class="form-group">
-                            <input type="submit" class="btn btn-primary btn-sm btn-primary go" value="GO">
+                            <input type="submit" class="btn btn-primary btn-sm btn-primary add" value="+ Tambah Taman">
                         </div>
                     </form>
                      </div>
@@ -236,8 +252,64 @@
           }
         });
     });
-    </script>
 
+    </script>
+	<script>
+		function initPost(){
+			alert('asdsadsdik');
+			var nama = document.getElementById('nama_taman').value;
+			var alamat = document.getElementById('alamat').value;
+			var geolokasi = document.getElementById('geolokasi').value;
+			var idadmin = document.getElementById('idadmin').value;
+			if(nama && alamat && geolokasi && idadmin){
+				alert('asdik');
+				TambahTaman();
+			}else{
+				alert('isi dengan benar');
+			}
+		}
+		function TambahTaman(){
+			alert('masuk');
+			var nama = document.getElementById('nama_taman').value;
+			var alamat = document.getElementById('alamat').value;
+			var geolokasi = document.getElementById('geolokasi').value;
+			var idadmin = document.getElementById('idadmin').value;
+			var id_taman = 12321312;
+			var xmlhttp=GetXmlHttpObject();
+			if(xmlhttp==null){
+				alert("Silahkan gunakan browser yang mendukung AJAX");
+				return;
+			}	
+			var url	=	"../admin/taman.php?command=0";
+			var param = "id_taman="+id_taman+
+				"&nama"+nama+
+				"&alamat"+alamat+
+				"&geolokasi"+geolokasi+
+				"&idadmin"+idadmin;
+			xmlhttp.open("POST",url,true);
+			xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			xmlhttp.setRequestHeader("Content-length", param.length);
+			xmlhttp.setRequestHeader("Connection", "close");
+			xmlhttp.send(param);
+		}
+		function GetXmlHttpObject() {
+			var xmlhttp=null;
+			try {
+				// Firefox, Opera 8.0+, Safari
+				xmlhttp=new XMLHttpRequest();
+			}
+			catch (e) {
+				// Internet Explorer
+				try {
+					xmlhttp=new ActiveXObject("Msxml2.XMLHTTP");
+				}
+				catch (e) {
+					xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+				}
+			}
+			return xmlhttp;
+		}
+	</script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
