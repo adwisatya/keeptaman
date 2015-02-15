@@ -16,7 +16,6 @@
             });
             google.maps.event.addListener(marker, 'click', function(){
                 selected_taman_id = $("#var-id-taman" + index).text();
-                alert($("#var-id-taman" + index).text());
                 $("#add-pengaduan").modal('show');
             })
         });
