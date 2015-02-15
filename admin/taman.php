@@ -22,7 +22,8 @@
 		$data	=	mysql_query("SELECT * from taman");
 		if(mysql_num_rows($data)>0){
 			while($user= mysql_fetch_array($data)){
-				echo $user['nama_taman'];
+				echo '<p id="taman'.$user['id_taman'].'">'.$user['nama_taman'].'</p>
+				';
 			}
 		}else{
 			echo "Tidak ada data";

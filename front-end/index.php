@@ -189,7 +189,8 @@
                     <h2>Statistik Pengaduan</h2>
                     <hr class="star-light">
                     <div class="row">
-                    <div class="list-taman">
+                    <div class="list-taman" id="list-taman">
+
                         <img src="img/portfolio/cabin.png" id="gambar-statistik1">
                         <img src="img/portfolio/cake.png" id="gambar-statistik2">
                         <img src="img/portfolio/circus.png" id="gambar-statistik3">
@@ -653,30 +654,6 @@
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
-    <!-- Klik Taman -->
-    <script type="text/javascript">
-    $(document).ready(function(){
-        jQuery('#nama-taman p').click(function(){
-          var jumTaman = 16;
-          var str = "" + this.id;
-          var id = str.substr(5,5);
-          //alert(str.substr(5,5));
-          if(id <= jumTaman) {
-            var i;
-            for (i=1; i<=jumTaman; i++) {
-              if (i == id) {
-                $("#gambar-statistik" + i).show();
-                $("#taman" + i).css("background-color", "#2f7e61");
-              } else {
-                $("#gambar-statistik" + i).hide();
-                $("#taman" + i).css("background-color", "#90b973");
-              }
-            }
-          }
-        });
-    });
-    </script>
-
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
@@ -697,7 +674,7 @@
     <script src="js/map.js"></script> -->
 
     <!-- Back-end -->
-    <script src="js/form.js"></script>
+     <script src="js/gilang.js"></script> 
 </body>
 
 </html>
