@@ -23,18 +23,23 @@
 		$data	=	mysql_query("SELECT * from taman");
 		if(mysql_num_rows($data)>0){
 			while($user= mysql_fetch_array($data)){
-?>
-		<td></td>
-		<td><?php $user['nama_taman']; ?></td>
-		<td><?php $user['alamat']; ?></td>
-		<td><?php $user['geolokasi']; ?></td>
-		<td>
-			<input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Edit">
-		</td>
-		<td>
-			 <input type="Submit" class="btn btn-primary btn-sm btn-primary delete" value="Delete">
-		</td>
-<?php
+//<<<<<<< HEAD
+				echo '<p id="taman'.$user['id_taman'].'">'.$user['nama_taman'].'</p>
+				';
+//=======
+		/*	echo
+				'<td></td>
+				<td><?php $user['nama_taman']; ?></td>
+				<td><?php $user['alamat']; ?></td>
+				<td><?php $user['geolokasi']; ?></td>
+				<td>
+					<input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Edit">
+				</td>
+				<td>
+					 <input type="Submit" class="btn btn-primary btn-sm btn-primary delete" value="Delete">
+				</td>'
+		*/
+//>>>>>>> 1690afdc88a82dbf5234cf70e05d87d570234a57
 			}
 		}else{
 			echo "Tidak ada data";
