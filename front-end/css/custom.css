@@ -85,7 +85,7 @@ header img {
 	text-align: right;
 }
 
-#img-responsive {
+#google-map {
 	width: 500px;
 	height: 400px;
 }
@@ -363,4 +363,8 @@ section h2 {
 .add:hover {
 	background-color: #fff;
 	color: #2f7e61;
+}
+
+#var-container-div{
+	/*display: none;*/
 }
