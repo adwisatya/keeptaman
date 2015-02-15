@@ -1,13 +1,13 @@
 $("#submit_pengaduan").click(function(){
 	var newdata = 'id_taman='+selected_taman_id+'&nama='+ $("#name").val()+'&email='+ $("#email").val()+
 				'&subjek='+ $("#subjek").val()+ '&isi='+ $("#isi").val();
-	alert(newdata);
+	//alert(newdata);
 	$.ajax({
 		type: "POST",
 		url: "../admin/pengaduan.php?command=1",
 		data: newdata,
 		success: function(data){
-			alert(data);
+			alert("Pengaduan telah ditambahkan");
 		},
 		error: function(){
 			alert("error submit pengaduan");
@@ -57,6 +57,5 @@ $.ajax({
 	url: "../admin/taman.php?command=5",
 	success: function(data){
 		$("#var-id-taman-div").html(data);
-		alert(data);
 	}
 })

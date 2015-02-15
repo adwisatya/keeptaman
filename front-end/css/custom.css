@@ -365,6 +365,6 @@ section h2 {
 	color: #2f7e61;
 }
 
-#var-container-div{
-	/*display: none;*/
+#var-container-div, #var-nama-taman-div, #var-id-taman-div{
+	display: none;
 }
