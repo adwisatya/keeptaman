@@ -295,6 +295,10 @@ th {
 	background-color: #c9e6b6;
 }
 
+td {
+	text-align: center;
+}
+
 header h2 {
 	color: #2f7e61;
 	font-size: 3em;
@@ -352,8 +356,7 @@ section h2 {
 .add {
 	background-color: #fff;
 	border-width: 0;
-	color: #c9e6b6;
-	font: bold;
+	color: #90b973;
 }
 
 .delete:hover {
@@ -363,4 +366,17 @@ section h2 {
 .add:hover {
 	background-color: #fff;
 	color: #2f7e61;
+}
+
+#manajemen-user {
+	border-bottom: solid 2px #d1d1d1;
+}
+
+#manajemen-taman {
+	padding-top: 20px;
+	padding-bottom: 50px;
+}
+
+#font {
+	font-size: 3em;
 }
