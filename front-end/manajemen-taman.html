@@ -146,6 +146,7 @@
 							</td>
 							<td>
                                 <input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="tambah" onClick="initPost();">
+								<input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="tambah" onClick="HapusTaman();">
                             </td>
                         </tr>
                     </table>
@@ -256,25 +257,23 @@
     </script>
 	<script>
 		function initPost(){
-			alert('asdsadsdik');
 			var nama = document.getElementById('nama_taman').value;
 			var alamat = document.getElementById('alamat').value;
 			var geolokasi = document.getElementById('geolokasi').value;
 			var idadmin = document.getElementById('idadmin').value;
 			if(nama && alamat && geolokasi && idadmin){
-				alert('asdik');
 				TambahTaman();
 			}else{
 				alert('isi dengan benar');
 			}
 		}
 		function TambahTaman(){
-			alert('masuk');
 			var nama = document.getElementById('nama_taman').value;
 			var alamat = document.getElementById('alamat').value;
 			var geolokasi = document.getElementById('geolokasi').value;
-			var idadmin = document.getElementById('idadmin').value;
-			var id_taman = 12321312;
+			var idadmin = "admin";
+			//var idadmin = document.getElementById('idadmin').value;
+			var id_taman = 123232;
 			var xmlhttp=GetXmlHttpObject();
 			if(xmlhttp==null){
 				alert("Silahkan gunakan browser yang mendukung AJAX");
@@ -286,6 +285,22 @@
 				"&alamat"+alamat+
 				"&geolokasi"+geolokasi+
 				"&idadmin"+idadmin;
+			xmlhttp.open("POST",url,true);
+			xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			xmlhttp.setRequestHeader("Content-length", param.length);
+			xmlhttp.setRequestHeader("Connection", "close");
+			xmlhttp.send(param);
+			alert('selesai');
+		}
+		function HapusTaman(){
+			var id_taman = document.getElementById('id_taman').value;
+			var xmlhttp=GetXmlHttpObject();
+			if(xmlhttp==null){
+				alert("Silahkan gunakan browser yang mendukung AJAX");
+				return;
+			}	
+			var url	=	"../admin/taman.php?command=1";
+			var param = "id_taman="+id_taman;
 			xmlhttp.open("POST",url,true);
 			xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 			xmlhttp.setRequestHeader("Content-length", param.length);

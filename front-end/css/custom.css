@@ -45,6 +45,14 @@ li {
 	width: 50%;
 }
 
+.btn {
+	border-width:0;
+}
+
+.btn:hover {
+	background-color: #c9e6b6;
+}
+
 .btn-success {
 	background-color: #2f7e61;
 }
@@ -186,6 +194,25 @@ a:link {
 	margin-top: 50px;
 }
 
+#filter-option {
+	float: left;
+	border-color: #2f7e61;
+	border-width: 5px;
+	padding-left: 10px;
+}
+
+.filter {
+	background-color: #fff;
+	border-color: #2f7e61;
+	color: #2f7e61;
+	border-width: 1px;
+	border-style: solid;
+}
+
+.filter:hover {
+	color: #2f7e61;
+}
+
 /* ADD PENGADUAN */
 .form-control1 {
 	display: block;
@@ -289,14 +316,6 @@ header .container {
 
 .form-control {
 	border-color: #c9e6b6;
-}
-
-.btn {
-	border-width:0;
-}
-
-.btn:hover {
-	background-color: #c9e6b6;
 }
 
 /* pengaduan-user */
