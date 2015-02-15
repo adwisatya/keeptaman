@@ -260,14 +260,14 @@
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Username</label>
-                                <input type="text" class="form-control" placeholder="Username" id="name" required data-validation-required-message="Please enter your name.">
+                                <input type="text" class="form-control" placeholder="Username" id="username" required data-validation-required-message="Please enter your name.">
                                 <!--<p class="help-block text-danger"></p>-->
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Password</label>
-                                <input type="email" class="form-control" placeholder="Password" id="email" required data-validation-required-message="Please enter your email address.">
+                                <input type="email" class="form-control" placeholder="Password" id="email_admin" required data-validation-required-message="Please enter your email address.">
                                 <!--<p class="help-block text-danger"></p>-->
                             </div>
                         </div>
@@ -599,21 +599,21 @@
                                 <div class="row control-group">
                                     <div class="form-group col-xs-12 floating-label-form-group controls">
                                         <label>Subjek</label>
-                                        <input type="email" class="form-control" placeholder="Subjek" id="email" required data-validation-required-message="Please enter your email address.">
+                                        <input type="text" class="form-control" placeholder="Subjek" id="subjek" required data-validation-required-message="Please enter your email address.">
                                         <!--<p class="help-block text-danger"></p>-->
                                     </div>
                                 </div>
                                 <div class="row control-group">
                                     <div>
                                         <label id="gambar">Gambar</label>
-                                        <input type="file" accept="image/*" class="form-control2" placeholder="Gambar" id="email" required data-validation-required-message="Please upload the picture.">
+                                        <input type="file" accept="image/*" class="form-control2" placeholder="Gambar" id="gambar" required data-validation-required-message="Please upload the picture.">
                                         <!--<p class="help-block text-danger"></p>-->
                                     </div>
                                 </div>
                                 <div class="row control-group">
                                     <div>
                                         <label id="pengaduan">Pengaduan :</label>
-                                        <textarea type="email" class="form-control1" placeholder="Input Pengaduan" id="email" required data-validation-required-message="Text here."></textarea>
+                                        <textarea type="text" class="form-control1" placeholder="Input Pengaduan" id="isi" required data-validation-required-message="Text here."></textarea>
                                         <!--<p class="help-block text-danger"></p>-->
                                     </div>
                                 </div>
@@ -622,7 +622,7 @@
                                 <div id="success"></div>
                                     <div class="row">
                                         <div class="form-group col-xs-12">
-                                            <button type="submit" class="btn btn-success btn-lg">Submit</button>
+                                            <button type="button" class="btn btn-success btn-lg" id="submit_pengaduan">Submit</button>
                                     </div>
                                 </div>
                             </form>
@@ -693,8 +693,11 @@
     <script src="js/freelancer.js"></script>
 
     <!--Google API-->
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <script src="js/map.js"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="js/map.js"></script> -->
+
+    <!-- Back-end -->
+    <script src="js/form.js"></script>
 </body>
 
 </html>
