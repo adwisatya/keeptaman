@@ -200,6 +200,8 @@ a:link {
 	margin-top: 50px;
 }
 
+/* Filter Pengaduan */
+
 #filter-option {
 	float: left;
 	border-color: #2f7e61;
@@ -217,6 +219,14 @@ a:link {
 
 .filter:hover {
 	color: #2f7e61;
+}
+
+#list-pengaduan {
+	margin-top: 50px;
+}
+
+.div-filter {
+	padding-top: 0;
 }
 
 /* ADD PENGADUAN */
@@ -330,8 +340,7 @@ header .container {
 
 /* pengaduan-user */
 #back {
-	background-color: #2f7e61;
-	border-radius: 4px;
+	background-color: #90b973;
 }
 
 /* statistik-pengaduan admin */
