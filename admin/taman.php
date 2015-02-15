@@ -35,6 +35,16 @@
 						}
 					}
 					break;
+			case 5: $data =	mysql_query("SELECT * from taman");
+					if(mysql_num_rows($data)>0){
+						$index = 0;
+						while($user= mysql_fetch_array($data)){
+							echo '<div id="var-id-taman'.$index.'">'.$user['id_taman'].'</div>
+							';
+							$index++;
+						}
+					}
+					break;
 			default:
 				echo "Command not found";
 				break;

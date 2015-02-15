@@ -1,5 +1,5 @@
 $("#submit_pengaduan").click(function(){
-	var newdata = 'nama='+ $("#name").val()+'&email='+ $("#email").val()+
+	var newdata = 'id_taman='+selected_taman_id+'&nama='+ $("#name").val()+'&email='+ $("#email").val()+
 				'&subjek='+ $("#subjek").val()+ '&isi='+ $("#isi").val();
 	alert(newdata);
 	$.ajax({
@@ -49,5 +49,14 @@ $.ajax({
 	url: "../admin/taman.php?command=4",
 	success: function(data){
 		$("#var-nama-taman-div").html(data);
+	}
+})
+
+$.ajax({
+	type: "GET",
+	url: "../admin/taman.php?command=5",
+	success: function(data){
+		$("#var-id-taman-div").html(data);
+		alert(data);
 	}
 })

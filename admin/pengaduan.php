@@ -3,14 +3,14 @@
 	if(isset($_GET['command'])){
 		
 			// $id_pengaduan = "1231";
-			$id_taman = "1"; //harus lihat dari idtaman
+			$id_taman = $_POST['id_taman'];
 			$nama_pelapor = $_POST['nama'];
 			$email_pelapor = $_POST['email'];
 			$subjek_laporan = $_POST['subjek'];
 			$isi = $_POST['isi'];
 			$id_admin = ""; //harus lihat dari username admin
 			$foto = "foto";
-			$waktu_lapor = date("YYYY-mm-dd");
+			$waktu_lapor = date("Y-m-d");
 			$status = "0";
 			
 		switch($_GET['command']){
@@ -24,7 +24,7 @@
 				$data = mysql_query("DELETE FROM pengaduan WHERE id_pengaduan=$id_pengaduan");
 				break;
 			default:
-				echo "command not found";
+				echo $_GET['command']."command not found";
 				break;
 		}
 	}else{
