@@ -92,17 +92,19 @@
                     <table class="table table-hover table-bordered">
                         <tr>
                             <th>Id</th>
-                            <th>Nama Taman</th>
-                            <th>Alamat</th>
-                            <th>Geolokasi</th>
+                            <th>Nama User</th>
+                            <th>Email</th>
+                            <th>Username</th>
+                            <th>Password</th>
                             <th></th>
                             <th></th>
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td>Taman A</td>
-                            <td>jalan A</td>
-                            <td>00001111</td>
+                            <td>user A</td>
+                            <td>user@user.com</td>
+                            <td>aaa</td>
+                            <td>bbbb</td>
                             <td>
                                 <input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Edit">
                             </td>
@@ -112,9 +114,10 @@
                          </tr>
                         <tr>
                             <td>1</td>
-                            <td>Taman A</td>
-                            <td>jalan A</td>
-                            <td>00001111</td>
+                            <td>user A</td>
+                            <td>user@user.com</td>
+                            <td>aaa</td>
+                            <td>bbbbbb</td>
                             <td>
                                 <input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Edit">
                             </td>
@@ -124,9 +127,10 @@
                          </tr>
                          <tr>
                             <td>1</td>
-                            <td>Taman A</td>
-                            <td>jalan A</td>
-                            <td>00001111</td>
+                            <td>User A</td>
+                            <td>user@user.com</td>
+                            <td>usernameee</td>
+                            <td>hghdgsh</td>
                             <td>
                                 <input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Edit">
                             </td>
@@ -147,7 +151,7 @@
                     <div class="row">
                         <form class="form-inline" id="form-button">
                         <div class="form-group">
-                            <a href="#tambah-taman"class="portfolio-link" data-toggle="modal"><input type="submit" class="btn btn-primary btn-sm btn-primary add" value="+ Tambah Taman"></a>
+                            <a href="#tambah-user"class="portfolio-link" data-toggle="modal"><input type="submit" class="btn btn-primary btn-sm btn-primary add" value="+ Tambah User"></a>
                         </div>
                     </form>
                      </div>
@@ -325,6 +329,76 @@
                                     </div>
                                 </div>
                                 <div class="row control-group">
+                                    <div>
+                                        <label id="pengaduan">Pengaduan :</label>
+                                        <textarea type="email" class="form-control1" placeholder="Input Pengaduan" id="email" required data-validation-required-message="Text here."></textarea>
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                </div>-->
+                        
+                            <br>
+                                <div id="success"></div>
+                                    <div class="row">
+                                        <div class="form-group col-xs-12">
+                                            <button type="submit" class="btn btn-success btn-lg">Add</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <button type="button" class="btn btn-default1" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="tambah-user" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Tambah User</h2>
+                            <hr class="star-primary">
+                            <br>
+                            <br>
+                            <br>
+                            <form name="sentMessage" id="contactForm" novalidate>
+                                <div class="row control-group">
+                                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                                        <label>Nama</label>
+                                        <input type="text" class="form-control" placeholder="Nama" id="name" required data-validation-required-message="Please enter your name.">
+                                        <!--<p class="help-block text-danger"></p>-->
+                                    </div>
+                                </div>
+                                <div class="row control-group">
+                                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                                        <label>Email</label>
+                                        <input type="email" class="form-control" placeholder="Alamat" id="email" required data-validation-required-message="Please enter your password.">
+                                        <!--<p class="help-block text-danger"></p>-->
+                                    </div>
+                                </div>
+                                <div class="row control-group">
+                                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                                        <label>Username</label>
+                                        <input type="email" class="form-control" placeholder="Geolokasi" id="email" required data-validation-required-message="Please enter your email address.">
+                                        <!--<p class="help-block text-danger"></p>-->
+                                    </div>
+                                </div>
+                                <div class="row control-group">
+                                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                                        <label>Password</label>
+                                        <input type="password" class="form-control" placeholder="Password" id="password_admin" required data-validation-required-message="Please enter your email address.">
+                                        <!--<p class="help-block text-danger"></p>-->
+                                    </div>
+                                </div>
+                                <!--<div class="row control-group">
                                     <div>
                                         <label id="pengaduan">Pengaduan :</label>
                                         <textarea type="email" class="form-control1" placeholder="Input Pengaduan" id="email" required data-validation-required-message="Text here."></textarea>

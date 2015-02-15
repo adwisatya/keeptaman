@@ -1,3 +1,8 @@
+@font-face {
+    font-family: BebasNeue;
+    src: url(BebasNeue.otf);
+}
+
 body {
 	color: #2f7e61;
 }
@@ -188,6 +193,7 @@ a:link {
 #lokasi-taman {
 	color: #000;
 	cursor: pointer;
+	float: right;
 }
 
 #contactForm {
@@ -374,7 +380,7 @@ section h2 {
 
 #manajemen-taman {
 	padding-top: 20px;
-	padding-bottom: 50px;
+	padding-bottom: 100px;
 }
 
 #font {
