@@ -129,7 +129,6 @@
 			xmlhttp.send(param);
 		}
 		function ApprovePengaduan(id_pengaduan){
-			alert('approve'+id_pengaduan);
 			var xmlhttp=GetXmlHttpObject();
 			if(xmlhttp==null){
 				alert("Silahkan gunakan browser yang mendukung AJAX");
@@ -141,21 +140,20 @@
 			xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 			xmlhttp.setRequestHeader("Content-length", param.length);
 			xmlhttp.setRequestHeader("Connection", "close");
+			xmlhttp.send(param);
 			kirimEmail(id_pengaduan);
 		}
 		function kirimEmail(id_pengaduan){
-			alert('kirim'+id_pengaduan);
 			var xmlhttp=GetXmlHttpObject();
 			if(xmlhttp==null){
 				alert("Silahkan gunakan browser yang mendukung AJAX");
 				return;
 			}	
-			var url	=	"../admin/mail.php";
-			var param = "id_pengaduan="+id_pengaduan;
-			xmlhttp.open("POST",url,true);
-			xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-			xmlhttp.setRequestHeader("Content-length", param.length);
-			xmlhttp.setRequestHeader("Connection", "close");	
+			var url	=	"../admin/mail.php?id_pengaduan="+id_pengaduan;
+			//var param = "id_pengaduan="+id_pengaduan;
+			xmlhttp.open("GET",url,true);
+			xmlhttp.send();
+			alert(url);
 		}		
 		
 		function getCheckedList(){
