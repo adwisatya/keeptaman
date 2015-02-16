@@ -105,9 +105,9 @@
 								while($taman= mysql_fetch_array($data)){
 								echo '<tr>
 										<td>'.$taman['id_taman'].'</td>
-										<td>'.$taman['nama_taman'].'</td>
-										<td>'.$taman['alamat'].'</td>
-										<td>'.$taman['geolokasi'].'</td>
+										<td><input type="text" id="nama_taman" value="'.$taman['nama_taman'].'"></td>
+										<td><input type="text" id="alamat" value="'.$taman['alamat'].'"></td>
+										<td><input type="text" id="geolokasi" value="'.$taman['geolokasi'].'"></td>
 										<td colspan="2">
 											<input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Simpan" onClick="alert(\'simpan\');">
 										</td>

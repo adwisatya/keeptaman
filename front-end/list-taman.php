@@ -103,7 +103,7 @@
 						?>
                          <tr id="tambah_taman" style="display:none">
                             <td></td>
-                            <td><input type="text" id="nama_taman" value="aryya"></td>
+                            <td><input type="text" id="nama_taman" value=""></td>
                             <td><input type="text" id="alamat"></td>
                             <td><input type="text" id="geolokasi"></td>
                             <td>
