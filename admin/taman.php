@@ -2,14 +2,14 @@
 	include("../connect.php");
 	
 	if(isset($_GET['command'])){
-		echo "alert('dsadsa')";
-		//if(isset($_POST['nama'])){
+		if(isset($_POST['nama'])){
 			
 			$id_taman = $_POST['id_taman'];
 			$nama_taman = $_POST['nama'];
 			$alamat	=	$_POST['alamat'];
 			$geolokasi = $_POST['geolokasi'];
 			$username_admin = $_POST['idadmin'];
+		}
 		switch($_GET['command']){
 			case 0 : $data = mysql_query("INSERT INTO taman (`id_taman`, `nama_taman`, `alamat`, `geolokasi`, `username_admin`) VALUES ('$id_taman', '$nama_taman','$alamat','$geolokasi','$username_admin');");
 					break;
