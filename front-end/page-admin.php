@@ -113,7 +113,7 @@
                         </select>
                         </div>
                         <div class="form-group">
-                            <input onClick="getCheckedList();" type="submit" class="btn btn-primary btn-sm btn-primary go" value="GO">
+                            <input onClick="getAksiPengaduan();" type="submit" class="btn btn-primary btn-sm btn-primary go" value="GO">
                         </div>
                     </form>
                      </div>

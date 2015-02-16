@@ -95,11 +95,18 @@
 		function show_add_taman(){
 			 document.getElementById("tambah_taman").style = "display";
 		}
+		function getAksiPengaduan(){
+			var action = document.getElementById('aksi').value;
+			var arrayPengaduan = getCheckedList();
+			alert(arrayPengaduan.length);
+		}
 		function getCheckedList(){
 			var checkboxes = document.getElementsByName('checked_id_pengaduan');
+			var arrayPengaduan = [];
 			for(var i=0, n=checkboxes.length; i<n;i++){
 				if(checkboxes[i].checked){
-					alert(i);
+					arrayPengaduan.push(checkboxes[i].value);
 				}
 			}
+			return arrayPengaduan;
 		}
