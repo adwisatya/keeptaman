@@ -1,5 +1,5 @@
 <?php
-	$id_pengaduan = $_GET['id_pengaduan'];	
+	$id_pengaduan = $_POST['id_pengaduan'];	
 	include("../connect.php");
 	$query = mysql_query("SELECT * from pengaduan WHERE id_pengaduan = '$id_pengaduan'");
 	$pengaduan = mysql_fetch_array($query);

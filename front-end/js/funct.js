@@ -103,8 +103,58 @@
 		function getAksiPengaduan(){
 			var action = document.getElementById('aksi').value;
 			var arrayPengaduan = getCheckedList();
-			alert(arrayPengaduan.length);
+			for(var i=0;i<arrayPengaduan.length;i++){
+				if(action==9){
+					DeletePengaduan(arrayPengaduan[i].value);
+				}else{
+					ApprovePengaduan(arrayPengaduan[i].value);
+				}
+			}
+			alert('pengaduan sudah diproses');
 		}
+		function DeletePengaduan(id_pengaduan){
+			var xmlhttp=GetXmlHttpObject();
+			if(xmlhttp==null){
+				alert("Silahkan gunakan browser yang mendukung AJAX");
+				return;
+			}	
+			var url	=	"../admin/pengaduan.php?command=3";
+			var param = "id_pengaduan="+id_pengaduan;
+			xmlhttp.open("POST",url,true);
+			xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			xmlhttp.setRequestHeader("Content-length", param.length);
+			xmlhttp.setRequestHeader("Connection", "close");
+			xmlhttp.send(param);
+			window.location.href="page-admin.php";
+		}
+		function ApprovePengaduan(id_pengaduan){
+			var xmlhttp=GetXmlHttpObject();
+			if(xmlhttp==null){
+				alert("Silahkan gunakan browser yang mendukung AJAX");
+				return;
+			}	
+			var url	=	"../admin/pengaduan.php?command=5";
+			var param = "id_pengaduan="+id_pengaduan;
+			xmlhttp.open("POST",url,true);
+			xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			xmlhttp.setRequestHeader("Content-length", param.length);
+			xmlhttp.setRequestHeader("Connection", "close");
+			kirimEmail(id_pengaduan);
+		}
+		function kirimEmail(id_pengaduan){
+			var xmlhttp=GetXmlHttpObject();
+			if(xmlhttp==null){
+				alert("Silahkan gunakan browser yang mendukung AJAX");
+				return;
+			}	
+			var url	=	"../admin/mail.php";
+			var param = "id_pengaduan="+id_pengaduan;
+			xmlhttp.open("POST",url,true);
+			xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			xmlhttp.setRequestHeader("Content-length", param.length);
+			xmlhttp.setRequestHeader("Connection", "close");	
+		}		
+		
 		function getCheckedList(){
 			var checkboxes = document.getElementsByName('checked_id_pengaduan');
 			var arrayPengaduan = [];
