@@ -39,7 +39,7 @@
                                             <i class="fa fa-search-plus fa-3x"></i>
                                         </div>
                                     </div>
-                                    <img src="'.$data['foto'].'" class="img-responsive" alt="">
+                                    <img src="'.$data['foto'].'" class="img-responsive thumbnail" alt="">
                                 </a>
                             </div>';
 					}
@@ -53,7 +53,7 @@
 					$data = mysql_fetch_array($result);
 					echo '<h2>'.$data['subjek_laporan'].'</h2>
                             <hr class="star-primary">
-                            <img src="'.$data['foto'].'" class="img-responsive img-centered" alt="">
+                            <img src="'.$data['foto'].'" class="img-responsive thumbnail-big img-centered" alt="">
                             <h3>'.$data['nama_taman'].'</h3>
                             <p class="deskripsi-pengaduan">'.$data['isi'].'</p>
                             <ul class="list-inline item-details">
@@ -78,7 +78,7 @@
                                             <i class="fa fa-search-plus fa-3x"></i>
                                         </div>
                                     </div>
-                                    <img src="'.$data['foto'].'" class="img-responsive" alt="">
+                                    <img src="'.$data['foto'].'" class="img-responsive thumbnail" alt="">
                                 </a>
                             </div>';
 					}
@@ -88,7 +88,7 @@
 			case 7:
 				$waktu_awal = $_POST['waktu_awal'];
 				$waktu_akhir = $_POST['waktu_akhir'];
-				$result = mysql_query("SELECT * FROM taman NATURAL JOIN pengaduan WHERE waktu_lapor between ".$waktu_awal." and ".$waktu_akhir);
+				$result = mysql_query("SELECT * FROM taman NATURAL JOIN pengaduan WHERE waktu_lapor between '".$waktu_awal."' and '".$waktu_akhir."'");
 				if(mysql_num_rows($result)>0){
 					$i = 0;
 					while($data = mysql_fetch_array($result)){
@@ -99,7 +99,7 @@
                                             <i class="fa fa-search-plus fa-3x"></i>
                                         </div>
                                     </div>
-                                    <img src="'.$data['foto'].'" class="img-responsive" alt="">
+                                    <img src="'.$data['foto'].'" class="img-responsive thumbnail" alt="">
                                 </a>
                             </div>';
 					}
@@ -110,7 +110,7 @@
 				$nama_taman = $_POST['nama_taman'];
 				$waktu_awal = $_POST['waktu_awal'];
 				$waktu_akhir = $_POST['waktu_akhir'];
-				$result = mysql_query("SELECT * FROM taman NATURAL JOIN pengaduan WHERE nama_taman='".$nama_taman."' and waktu_lapor between ".$waktu_awal." and ".$waktu_akhir);
+				$result = mysql_query("SELECT * FROM taman NATURAL JOIN pengaduan WHERE nama_taman='".$nama_taman."' and waktu_lapor between '".$waktu_awal."' and '".$waktu_akhir."'");
 				if(mysql_num_rows($result)>0){
 					$i = 0;
 					while($data = mysql_fetch_array($result)){
@@ -121,7 +121,7 @@
                                             <i class="fa fa-search-plus fa-3x"></i>
                                         </div>
                                     </div>
-                                    <img src="'.$data['foto'].'" class="img-responsive" alt="">
+                                    <img src="'.$data['foto'].'" class="img-responsive thumbnail" alt="">
                                 </a>
                             </div>';
 					}
@@ -141,7 +141,7 @@
                                             <i class="fa fa-search-plus fa-3x"></i>
                                         </div>
                                     </div>
-                                    <img src="'.$data['foto'].'" class="img-responsive" alt="">
+                                    <img src="'.$data['foto'].'" class="img-responsive thumbnail" alt="">
                                 </a>
                             </div>';
 					}
@@ -162,7 +162,7 @@
                                             <i class="fa fa-search-plus fa-3x"></i>
                                         </div>
                                     </div>
-                                    <img src="'.$data['foto'].'" class="img-responsive" alt="">
+                                    <img src="'.$data['foto'].'" class="img-responsive thumbnail" alt="">
                                 </a>
                             </div>';
 					}
@@ -173,7 +173,7 @@
 				$waktu_awal = $_POST['waktu_awal'];
 				$waktu_akhir = $_POST['waktu_akhir'];
 				$status = $_POST['status'];
-				$result = mysql_query("SELECT * FROM taman NATURAL JOIN pengaduan WHERE status=".$status." and waktu_lapor between ".$waktu_awal." and ".$waktu_akhir);
+				$result = mysql_query("SELECT * FROM taman NATURAL JOIN pengaduan WHERE status=".$status." and waktu_lapor between '".$waktu_awal."' and '".$waktu_akhir."'");
 				if(mysql_num_rows($result)>0){
 					$i = 0;
 					while($data = mysql_fetch_array($result)){
@@ -184,7 +184,7 @@
                                             <i class="fa fa-search-plus fa-3x"></i>
                                         </div>
                                     </div>
-                                    <img src="'.$data['foto'].'" class="img-responsive" alt="">
+                                    <img src="'.$data['foto'].'" class="img-responsive thumbnail" alt="">
                                 </a>
                             </div>';
 					}
@@ -196,7 +196,7 @@
 				$waktu_awal = $_POST['waktu_awal'];
 				$waktu_akhir = $_POST['waktu_akhir'];
 				$status = $_POST['status'];
-				$result = mysql_query("SELECT * FROM taman NATURAL JOIN pengaduan WHERE nama_taman='".$nama_taman."' and status=".$status." and waktu_lapor between ".$waktu_awal." and ".$waktu_akhir);
+				$result = mysql_query("SELECT * FROM taman NATURAL JOIN pengaduan WHERE nama_taman='".$nama_taman."' and status=".$status." and waktu_lapor between '".$waktu_awal."' and '".$waktu_akhir."'");
 				if(mysql_num_rows($result)>0){
 					$i = 0;
 					while($data = mysql_fetch_array($result)){
@@ -207,7 +207,7 @@
                                             <i class="fa fa-search-plus fa-3x"></i>
                                         </div>
                                     </div>
-                                    <img src="'.$data['foto'].'" class="img-responsive" alt="">
+                                    <img src="'.$data['foto'].'" class="img-responsive thumbnail" alt="">
                                 </a>
                             </div>';
 					}

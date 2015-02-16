@@ -3,13 +3,11 @@ $("#submit_pengaduan").click(function(){
 	var formData = new FormData();
 	var filename;
 	if(file != null){
+		filename = file.name;
 		formData.append('image-upload', file, filename);
 		var xhr = new XMLHttpRequest();
 	    xhr.open('post', 'upload-image.php', true);
 	    xhr.send(formData);
-	    filename = file.name;
-	} else{
-		filename = "";
 	}
 
 	var newdata = 'id_taman='+selected_taman_id+'&nama='+ $("#name").val()+'&email='+ $("#email").val()+
