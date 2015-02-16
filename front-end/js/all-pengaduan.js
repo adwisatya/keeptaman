@@ -60,7 +60,10 @@ $("#btn-filter").click(function(){
 		mydata = "waktu_awal=" + waktu_awal + "&waktu_akhir=" + waktu_akhir;
 		command = 7;
 	}
-	//alert(mydata);
+	else{
+		command = 4;
+	}
+	//alert(mydata + " command" + command);
 	$.ajax({
 		type: "POST",
 		url: "../back-end/pengaduan.php?command="+command,
