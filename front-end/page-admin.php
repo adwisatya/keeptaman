@@ -100,42 +100,9 @@
                             <th>Status</th>
                             <th></th>
                         </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Windy</td>
-                            <td>windyamelia94@yahoo.com</td>
-                            <td>judul</td>
-                            <td>taman A</td>
-                            <td>alallalala</td>
-                            <td>pending</td>
-                            <td>
-                                <input type="checkbox" name="report_myTextEditBox" value="checked">
-                            </td>
-                         </tr>
-                         <tr>
-                            <td>1</td>
-                            <td>Windy</td>
-                            <td>windyamelia94@yahoo.com</td>
-                            <td>judul</td>
-                            <td>taman A</td>
-                            <td>alallalala</td>
-                            <td>pending</td>
-                            <td>
-                                <input type="checkbox" name="report_myTextEditBox" value="checked">
-                            </td>
-                         </tr>
-                         <tr>
-                            <td>1</td>
-                            <td>Windy</td>
-                            <td>windyamelia94@yahoo.com</td>
-                            <td>judul</td>
-                            <td>taman A</td>
-                            <td>alallalala</td>
-                            <td>pending</td>
-                            <td>
-                                <input type="checkbox" name="report_myTextEditBox" value="checked">
-                            </td>
-                         </tr>
+						<?php
+							include("../admin/pengaduan.php");
+						?>
                     </table>
                     <div class="row">
                         <form class="form-inline" id="form-button">

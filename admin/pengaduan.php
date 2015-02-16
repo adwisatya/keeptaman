@@ -36,12 +36,21 @@
 		if(mysql_num_rows($result)>0){
 			$i = 1;
 			while($data = mysql_fetch_array($result)){
-				echo "<td>$i</td><td>".$data['nama_pelapor']."</td><td>".
-					$data['email_pelapor']."</td><td>".
-					$data['subjek_laporan']."</td><td>".
-					$data['isi']."</td><td>".
-					$data['status']."</td><td>";							
-				$i++;					 
+				echo '
+                        <tr>
+                            <td>'.$i.'</td>
+                            <td>'.$data['nama_pelapor'].'</td>
+                            <td>'.$data['email_pelapor'].'</td>
+                            <td>'.$data['subjek_laporan'].'</td>
+                            <td>'.$data['id_taman'].'</td>
+                            <td>'.$data['isi'].'</td>
+                            <td>'.$data['nama_pelapor'].'</td>
+                            <td>
+                                <input type="checkbox" name="id_pengaduan" id="id_pengaduan" value="'.$data['id_pengaduan'].'">
+                            </td>
+                         </tr>
+				';
+				$i++;
 			}
 		}else{
 			echo "Tidak ada data";
