@@ -38,7 +38,7 @@
 			var nama = document.getElementById('nama_taman').value;
 			var alamat = document.getElementById('alamat').value;
 			var geolokasi = document.getElementById('geolokasi').value;
-			var idadmin = "admin2";
+			var idadmin = document.getElementById('idadmin').value;
 			//var idadmin = document.getElementById('idadmin').value;
 			var id_taman = document.getElementById('id_taman').innerHTML;
 			var xmlhttp=GetXmlHttpObject();

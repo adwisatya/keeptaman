@@ -20,8 +20,22 @@
 	}else{
 		$data	=	mysql_query("SELECT * from admin");
 		if(mysql_num_rows($data)>0){
+			$index = 1;
 			while($user= mysql_fetch_array($data)){
-				echo $user['password'];
+				echo '
+					 <tr>
+						<td>'.$index.'</td>
+						<td>'.$user['name'].'</td>
+						<td>'.$user['email'].'</td>
+						<td>'.$user['username'].'</td>
+						<td>
+							<input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Edit" onClick="window.location.href = \'edit-user.php?id='.$user['username'].'\';">
+						</td>
+						<td>
+							 <input type="Submit" class="btn btn-primary btn-sm btn-primary delete" value="Delete">
+						</td>
+					 </tr>';
+					 $index++;
 			}
 		}else{
 			echo "Tidak ada data";
