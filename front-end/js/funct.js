@@ -95,3 +95,11 @@
 		function show_add_taman(){
 			 document.getElementById("tambah_taman").style = "display";
 		}
+		function getCheckedList(){
+			var checkboxes = document.getElementsByName('checked_id_pengaduan');
+			for(var i=0, n=checkboxes.length; i<n;i++){
+				if(checkboxes[i].checked){
+					alert(i);
+				}
+			}
+		}
