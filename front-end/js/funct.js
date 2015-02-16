@@ -138,3 +138,43 @@
 			alert('Data user telah diupdate');
 			window.location.href = "edit-user.php?id="+username;
 		}
+		function HapusUser(id_userx){
+			var id_user = id_userx;
+			var xmlhttp=GetXmlHttpObject();
+			if(xmlhttp==null){
+				alert("Silahkan gunakan browser yang mendukung AJAX");
+				return;
+			}	
+			var url	=	"../admin/user.php?command=1";
+			var param = "username="+id_user;
+			xmlhttp.open("POST",url,true);
+			xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			xmlhttp.setRequestHeader("Content-length", param.length);
+			xmlhttp.setRequestHeader("Connection", "close");
+			xmlhttp.send(param);
+			alert('user telah dihapus');
+			window.location.href="list-user.php";
+		}
+		function TambahUser(){
+			var nama = document.getElementById('nama_admin').value;
+			var username = document.getElementById('username').value;
+			var email = document.getElementById('email').value;
+			var password = document.getElementById('password').value;
+			var xmlhttp=GetXmlHttpObject();
+			if(xmlhttp==null){
+				alert("Silahkan gunakan browser yang mendukung AJAX");
+				return;
+			}	
+			var url	=	"../admin/user.php?command=0";
+			var param = "username="+username+
+				"&password="+password+
+				"&name="+nama+
+				"&email="+email;
+			xmlhttp.open("POST",url,true);
+			xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			xmlhttp.setRequestHeader("Content-length", param.length);
+			xmlhttp.setRequestHeader("Connection", "close");
+			xmlhttp.send(param);
+			alert('User telah ditambahkan');
+			window.location.href = "list-user.php";
+		}

@@ -229,9 +229,7 @@
     });
 
     </script>
-	<script src="js/funct.js">
-	
-	</script>
+	<script src="js/funct.js">	</script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 

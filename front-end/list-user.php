@@ -101,13 +101,15 @@
 						<?php
 							include('../admin/user.php');
 						?>
-                         <tr id="form_tambah_user" style="display:none">
+                         <tr id="form_tambah_user" style="display:none;">
                             <td></td>
-                            <td><input type="text" id="nama_taman" value=""></td>
-                            <td><input type="text" id="alamat"></td>
-                            <td><input type="text" id="geolokasi"></td>
+                            <td><input type="text" id="nama_admin"></td>
+                            <td><input type="text" id="email"></td>
+                            <td><input type="text" id="username"></td>
+                            <td><input type="text" id="password"></td>
+
 							<td>
-                                <input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Tambah User" onClick="tambahUser();">
+                                <input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Tambah User" onClick="TambahUser();">
                             </td>
                         </tr>
                     </table>
@@ -352,6 +354,8 @@
 			var geolokasi = document.getElementById('geolokasi').value;
 		}
 	</script>
+	<script src="js/funct.js">	</script>
+
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
