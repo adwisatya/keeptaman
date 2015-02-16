@@ -3,7 +3,6 @@
 	
 	if(isset($_GET['command'])){
 		if(isset($_POST['nama'])){
-			
 			$id_taman = $_POST['id_taman'];
 			$nama_taman = $_POST['nama'];
 			$alamat	=	$_POST['alamat'];
@@ -12,6 +11,7 @@
 		}
 		switch($_GET['command']){
 			case 0 : $data = mysql_query("INSERT INTO taman (`id_taman`, `nama_taman`, `alamat`, `geolokasi`, `username_admin`) VALUES ('$id_taman', '$nama_taman','$alamat','$geolokasi','$username_admin');");
+					echo "alert('dadas')";
 					break;
 			case 1 : $data = mysql_query("DELETE FROM taman WHERE `id_taman` = '$id_taman'");
 					break;

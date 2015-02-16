@@ -1,17 +1,23 @@
 $("#submit_pengaduan").click(function(){
 	var file = document.getElementById('image-upload').files[0];
 	var formData = new FormData();
-	formData.append('image-upload', file, file.name);
-	var xhr = new XMLHttpRequest();
-    xhr.open('post', 'upload-image.php', true);
-    xhr.send(formData);
+	var filename;
+	if(file != null){
+		formData.append('image-upload', file, filename);
+		var xhr = new XMLHttpRequest();
+	    xhr.open('post', 'upload-image.php', true);
+	    xhr.send(formData);
+	    filename = file.name;
+	} else{
+		filename = "";
+	}
 
 	var newdata = 'id_taman='+selected_taman_id+'&nama='+ $("#name").val()+'&email='+ $("#email").val()+
-				'&subjek='+ $("#subjek").val()+ '&isi='+ $("#isi").val() + '&filename=' +'image/'+file.name;
+				'&subjek='+ $("#subjek").val()+ '&isi='+ $("#isi").val() + '&filename=' +'image/'+filename;
 	//alert(newdata);
 	$.ajax({
 		type: "POST",
-		url: "../admin/pengaduan.php?command=1",
+		url: "../back-end/pengaduan.php?command=1",
 		data: newdata,
 		success: function(data){
 			alert("Pengaduan telah ditambahkan");
@@ -29,7 +35,7 @@ $("#submit_pengaduan").click(function(){
 
 $.ajax({
 	type: "GET",
-	url: "../admin/taman.php?command=7",
+	url: "../back-end/taman.php?command=7",
 	success: function(data){
 		$("#nama-taman").html(data);
 		jQuery('#nama-taman p').click(function(){
@@ -50,7 +56,7 @@ $.ajax({
 
 $.ajax({
 	type: "GET",
-	url: "../admin/taman.php?command=3",
+	url: "../back-end/taman.php?command=3",
 	success: function(data){
 		$("#var-container-div").html(data);
 	}
@@ -58,7 +64,7 @@ $.ajax({
 
 $.ajax({
 	type: "GET",
-	url: "../admin/taman.php?command=4",
+	url: "../back-end/taman.php?command=4",
 	success: function(data){
 		$("#var-nama-taman-div").html(data);
 	}
@@ -66,7 +72,7 @@ $.ajax({
 
 $.ajax({
 	type: "GET",
-	url: "../admin/taman.php?command=5",
+	url: "../back-end/taman.php?command=5",
 	success: function(data){
 		$("#var-id-taman-div").html(data);
 	}

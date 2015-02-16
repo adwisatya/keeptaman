@@ -219,6 +219,10 @@ a:link {
 	margin-left: 620px;
 }
 
+.deskripsi-pengaduan{
+	text-align: left;
+}
+
 /* Filter Pengaduan */
 
 .filter-option {

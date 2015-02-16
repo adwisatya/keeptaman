@@ -24,6 +24,9 @@
 			case 3: 
 				$data = mysql_query("DELETE FROM pengaduan WHERE id_pengaduan=$id_pengaduan");
 				break;
+			case 4:
+				$data = mysql_query("SELECT * from taman NATURAL JOIN pengaduan");
+				break;
 			default:
 				echo $_GET['command']."command not found";
 				break;

@@ -21,7 +21,7 @@
 				alert("Silahkan gunakan browser yang mendukung AJAX");
 				return;
 			}	
-			var url	=	"../admin/taman.php?command=0";
+			var url	=	"../admin/taman-aryya.php?command=0";
 			var param = "id_taman="+id_taman+
 				"&nama="+nama+
 				"&alamat="+alamat+
@@ -38,7 +38,7 @@
 			var nama = document.getElementById('nama_taman').value;
 			var alamat = document.getElementById('alamat').value;
 			var geolokasi = document.getElementById('geolokasi').value;
-			var idadmin = "admin2";
+			var idadmin = document.getElementById('idadmin').value;
 			//var idadmin = document.getElementById('idadmin').value;
 			var id_taman = document.getElementById('id_taman').innerHTML;
 			var xmlhttp=GetXmlHttpObject();
@@ -46,13 +46,12 @@
 				alert("Silahkan gunakan browser yang mendukung AJAX");
 				return;
 			}	
-			var url	=	"../admin/taman.php?command=2";
+			var url	=	"../admin/taman-aryya.php?command=2";
 			var param = "id_taman="+id_taman+
 				"&nama="+nama+
 				"&alamat="+alamat+
 				"&geolokasi="+geolokasi+
 				"&idadmin="+idadmin;
-				alert(param);
 			xmlhttp.open("POST",url,true);
 			xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 			xmlhttp.setRequestHeader("Content-length", param.length);
@@ -68,7 +67,7 @@
 				alert("Silahkan gunakan browser yang mendukung AJAX");
 				return;
 			}	
-			var url	=	"../admin/taman.php?command=1";
+			var url	=	"../admin/taman-aryya.php?command=1";
 			var param = "id_taman="+id_taman;
 			xmlhttp.open("POST",url,true);
 			xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
