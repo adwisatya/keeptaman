@@ -1,6 +1,13 @@
 $("#submit_pengaduan").click(function(){
+	var file = document.getElementById('image-upload').files[0];
+	var formData = new FormData();
+	formData.append('image-upload', file, file.name);
+	var xhr = new XMLHttpRequest();
+    xhr.open('post', 'upload-image.php', true);
+    xhr.send(formData);
+
 	var newdata = 'id_taman='+selected_taman_id+'&nama='+ $("#name").val()+'&email='+ $("#email").val()+
-				'&subjek='+ $("#subjek").val()+ '&isi='+ $("#isi").val();
+				'&subjek='+ $("#subjek").val()+ '&isi='+ $("#isi").val() + '&filename=' +'image/'+file.name;
 	//alert(newdata);
 	$.ajax({
 		type: "POST",

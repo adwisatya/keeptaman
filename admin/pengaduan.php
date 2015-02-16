@@ -9,13 +9,14 @@
 			$subjek_laporan = $_POST['subjek'];
 			$isi = $_POST['isi'];
 			$id_admin = ""; //harus lihat dari username admin
-			$foto = "foto";
 			$waktu_lapor = date("Y-m-d");
 			$status = "0";
+			$target_file = $_POST['filename'];
+
 			
 		switch($_GET['command']){
 			case 1:
-				$data = mysql_query("INSERT INTO `ppl_keep_taman`.`pengaduan` (`nama_pelapor`, `email_pelapor`, `id_taman`, `waktu_lapor`, `subjek_laporan`, `isi`, `foto`, `status`, `id_admin`) VALUES ('$nama_pelapor', '$email_pelapor', '$id_taman', '$waktu_lapor', '$subjek_laporan', '$isi', '$foto', '$status', '$id_admin');");
+				$data = mysql_query("INSERT INTO `ppl_keep_taman`.`pengaduan` (`nama_pelapor`, `email_pelapor`, `id_taman`, `waktu_lapor`, `subjek_laporan`, `isi`, `foto`, `status`, `id_admin`) VALUES ('$nama_pelapor', '$email_pelapor', '$id_taman', '$waktu_lapor', '$subjek_laporan', '$isi', '$target_file', '$status', '$id_admin');");
 				break;
 			case 2:
 				$data = mysql_query("UPDATE `ppl_keep_taman`.`pengaduan` SET id_pengaduan='$id_pengaduan', nama_pelapor='$nama_pelapor', email_pelapor='$email_pelapor', id_taman='$id_taman', waktu_lapor='$waktu_lapor', subjek_laporan='$subjek_laporan', isi='$isi', foto='$foto', status='$status', id_admin='$id_admin'");
