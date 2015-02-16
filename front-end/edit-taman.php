@@ -99,21 +99,25 @@
                             <th></th>
                         </tr>
                         <?php
-						
-						
+							if(isset($_GET['id'])){
+								include("../connect.php");
+								$data =	mysql_query("SELECT * from taman WHERE id_taman = '".$_GET['id']."'");
+								while($taman= mysql_fetch_array($data)){
+								echo '<tr>
+										<td>'.$taman['id_taman'].'</td>
+										<td>'.$taman['nama_taman'].'</td>
+										<td>'.$taman['alamat'].'</td>
+										<td>'.$taman['geolokasi'].'</td>
+										<td colspan="2">
+											<input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Simpan" onClick="alert(\'simpan\');">
+										</td>
+									 </tr>';
+								}
+							}else{
+								echo "alert('masukkan id')";
+							}
 						?>
-						<tr>
-                            <td>1</td>
-                            <td>Taman A</td>
-                            <td>jalan A</td>
-                            <td>00001111</td>
-                            <td>
-                                <input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Edit">
-                            </td>
-                            <td>
-                                 <input type="Submit" class="btn btn-primary btn-sm btn-primary delete" value="Delete">
-                            </td>
-                         </tr>
+
                     </table>
                     <div class="row">
                         <form class="form-inline" id="form-button">

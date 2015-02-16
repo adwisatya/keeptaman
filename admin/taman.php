@@ -52,6 +52,7 @@
 	}else{
 		$data	=	mysql_query("SELECT * from taman");
 		if(mysql_num_rows($data)>0){
+
 			$index = 1;
 			while($taman= mysql_fetch_array($data)){
 			echo '<tr>
