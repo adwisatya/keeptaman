@@ -65,9 +65,159 @@
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>';
 				}
 				break;
+			case 6:
+				$nama_taman = $_POST['nama_taman'];
+				$result = mysql_query("SELECT * FROM taman NATURAL JOIN pengaduan WHERE nama_taman='".$nama_taman."'");
+				if(mysql_num_rows($result)>0){
+					$i = 0;
+					while($data = mysql_fetch_array($result)){
+						echo '<div class="col-sm-4 portfolio-item">
+                                <a href="#portfolioModal1" class="portfolio-link pengaduan" data-toggle="modal" id="'.$data['id_pengaduan'].'">
+                                    <div class="caption">
+                                        <div class="caption-content">
+                                            <i class="fa fa-search-plus fa-3x"></i>
+                                        </div>
+                                    </div>
+                                    <img src="'.$data['foto'].'" class="img-responsive" alt="">
+                                </a>
+                            </div>';
+					}
+
+				}
+				break;
+			case 7:
+				$waktu_awal = $_POST['waktu_awal'];
+				$waktu_akhir = $_POST['waktu_akhir'];
+				$result = mysql_query("SELECT * FROM taman NATURAL JOIN pengaduan WHERE waktu_lapor between ".$waktu_awal." and ".$waktu_akhir);
+				if(mysql_num_rows($result)>0){
+					$i = 0;
+					while($data = mysql_fetch_array($result)){
+						echo '<div class="col-sm-4 portfolio-item">
+                                <a href="#portfolioModal1" class="portfolio-link pengaduan" data-toggle="modal" id="'.$data['id_pengaduan'].'">
+                                    <div class="caption">
+                                        <div class="caption-content">
+                                            <i class="fa fa-search-plus fa-3x"></i>
+                                        </div>
+                                    </div>
+                                    <img src="'.$data['foto'].'" class="img-responsive" alt="">
+                                </a>
+                            </div>';
+					}
+
+				}
+				break;
+			case 8:
+				$nama_taman = $_POST['nama_taman'];
+				$waktu_awal = $_POST['waktu_awal'];
+				$waktu_akhir = $_POST['waktu_akhir'];
+				$result = mysql_query("SELECT * FROM taman NATURAL JOIN pengaduan WHERE nama_taman='".$nama_taman."' and waktu_lapor between ".$waktu_awal." and ".$waktu_akhir);
+				if(mysql_num_rows($result)>0){
+					$i = 0;
+					while($data = mysql_fetch_array($result)){
+						echo '<div class="col-sm-4 portfolio-item">
+                                <a href="#portfolioModal1" class="portfolio-link pengaduan" data-toggle="modal" id="'.$data['id_pengaduan'].'">
+                                    <div class="caption">
+                                        <div class="caption-content">
+                                            <i class="fa fa-search-plus fa-3x"></i>
+                                        </div>
+                                    </div>
+                                    <img src="'.$data['foto'].'" class="img-responsive" alt="">
+                                </a>
+                            </div>';
+					}
+
+				}
+				break;
+			case 9:
+				$status = $_POST['status'];
+				$result = mysql_query("SELECT * FROM taman NATURAL JOIN pengaduan WHERE status=".$status);
+				if(mysql_num_rows($result)>0){
+					$i = 0;
+					while($data = mysql_fetch_array($result)){
+						echo '<div class="col-sm-4 portfolio-item">
+                                <a href="#portfolioModal1" class="portfolio-link pengaduan" data-toggle="modal" id="'.$data['id_pengaduan'].'">
+                                    <div class="caption">
+                                        <div class="caption-content">
+                                            <i class="fa fa-search-plus fa-3x"></i>
+                                        </div>
+                                    </div>
+                                    <img src="'.$data['foto'].'" class="img-responsive" alt="">
+                                </a>
+                            </div>';
+					}
+
+				}
+				break;
+			case 10:
+				$nama_taman = $_POST['nama_taman'];
+				$status = $_POST['status'];
+				$result = mysql_query("SELECT * FROM taman NATURAL JOIN pengaduan WHERE nama_taman='".$nama_taman."' and status=".$status);
+				if(mysql_num_rows($result)>0){
+					$i = 0;
+					while($data = mysql_fetch_array($result)){
+						echo '<div class="col-sm-4 portfolio-item">
+                                <a href="#portfolioModal1" class="portfolio-link pengaduan" data-toggle="modal" id="'.$data['id_pengaduan'].'">
+                                    <div class="caption">
+                                        <div class="caption-content">
+                                            <i class="fa fa-search-plus fa-3x"></i>
+                                        </div>
+                                    </div>
+                                    <img src="'.$data['foto'].'" class="img-responsive" alt="">
+                                </a>
+                            </div>';
+					}
+
+				}
+				break;
+			case 11:
+				$waktu_awal = $_POST['waktu_awal'];
+				$waktu_akhir = $_POST['waktu_akhir'];
+				$status = $_POST['status'];
+				$result = mysql_query("SELECT * FROM taman NATURAL JOIN pengaduan WHERE status=".$status." and waktu_lapor between ".$waktu_awal." and ".$waktu_akhir);
+				if(mysql_num_rows($result)>0){
+					$i = 0;
+					while($data = mysql_fetch_array($result)){
+						echo '<div class="col-sm-4 portfolio-item">
+                                <a href="#portfolioModal1" class="portfolio-link pengaduan" data-toggle="modal" id="'.$data['id_pengaduan'].'">
+                                    <div class="caption">
+                                        <div class="caption-content">
+                                            <i class="fa fa-search-plus fa-3x"></i>
+                                        </div>
+                                    </div>
+                                    <img src="'.$data['foto'].'" class="img-responsive" alt="">
+                                </a>
+                            </div>';
+					}
+
+				}
+				break;
+			case 12:
+				$nama_taman = $_POST['nama_taman'];
+				$waktu_awal = $_POST['waktu_awal'];
+				$waktu_akhir = $_POST['waktu_akhir'];
+				$status = $_POST['status'];
+				$result = mysql_query("SELECT * FROM taman NATURAL JOIN pengaduan WHERE nama_taman='".$nama_taman."' and status=".$status." and waktu_lapor between ".$waktu_awal." and ".$waktu_akhir);
+				if(mysql_num_rows($result)>0){
+					$i = 0;
+					while($data = mysql_fetch_array($result)){
+						echo '<div class="col-sm-4 portfolio-item">
+                                <a href="#portfolioModal1" class="portfolio-link pengaduan" data-toggle="modal" id="'.$data['id_pengaduan'].'">
+                                    <div class="caption">
+                                        <div class="caption-content">
+                                            <i class="fa fa-search-plus fa-3x"></i>
+                                        </div>
+                                    </div>
+                                    <img src="'.$data['foto'].'" class="img-responsive" alt="">
+                                </a>
+                            </div>';
+					}
+
+				}
+				break;
 			default:
 				echo $_GET['command']."command not found";
 				break;
+
 		}
 	}else{
 		$result 	=	mysql_query("SELECT * from pengaduan");
