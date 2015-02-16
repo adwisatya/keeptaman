@@ -214,6 +214,25 @@
 
 				}
 				break;
+			case 13:
+				$result = mysql_query("SELECT * from taman NATURAL JOIN pengaduan LIMIT 6");
+				if(mysql_num_rows($result)>0){
+					$i = 0;
+					while($data = mysql_fetch_array($result)){
+						echo '<div class="col-sm-4 portfolio-item">
+                                <a href="#portfolioModal1" class="portfolio-link pengaduan" data-toggle="modal" id="'.$data['id_pengaduan'].'">
+                                    <div class="caption">
+                                        <div class="caption-content">
+                                            <i class="fa fa-search-plus fa-3x"></i>
+                                        </div>
+                                    </div>
+                                    <img src="'.$data['foto'].'" class="img-responsive thumbnail" alt="">
+                                </a>
+                            </div>';
+					}
+
+				}
+				break;
 			default:
 				echo $_GET['command']."command not found";
 				break;

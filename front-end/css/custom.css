@@ -163,7 +163,7 @@ a:link {
 	margin-bottom: 0;
 }
 
-#gambar-statistik2, #gambar-statistik3, #gambar-statistik4, #gambar-statistik5, #gambar-statistik6, #gambar-statistik7, #gambar-statistik8, #gambar-statistik9, #gambar-statistik10, #gambar-statistik11, #gambar-statistik12, #gambar-statistik13, #gambar-statistik14, #gambar-statistik15, #gambar-statistik16 {
+.gambar-statistic {
 	height: 50%;
 	width: 50%;
 	display: none;
