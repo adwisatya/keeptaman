@@ -28,8 +28,9 @@
 				$data = mysql_query("SELECT * from taman NATURAL JOIN pengaduan");
 				break;
 			case 5:
-				$data = mysql_query("UPDATE `pengaduan` SET status='1' WHERE id_pengaduan='$id_pengaduan'");
+				$data = mysql_query("UPDATE pengaduan SET status='1' WHERE id_pengaduan='$id_pengaduan'");
 				break;
+				
 			default:
 				echo "command not found";
 				break;

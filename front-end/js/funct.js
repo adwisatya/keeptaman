@@ -102,15 +102,17 @@
 		}
 		function getAksiPengaduan(){
 			var action = document.getElementById('aksi').value;
-			var arrayPengaduan = getCheckedList();
+			var arrayPengaduan = new Array();
+			arrayPengaduan = getCheckedList();
 			for(var i=0;i<arrayPengaduan.length;i++){
 				if(action==9){
-					DeletePengaduan(arrayPengaduan[i].value);
+					DeletePengaduan(arrayPengaduan[i]);
 				}else{
-					ApprovePengaduan(arrayPengaduan[i].value);
+					ApprovePengaduan(arrayPengaduan[i]);
 				}
 			}
 			alert('pengaduan sudah diproses');
+			window.location.href="page-admin.php";
 		}
 		function DeletePengaduan(id_pengaduan){
 			var xmlhttp=GetXmlHttpObject();
@@ -125,9 +127,9 @@
 			xmlhttp.setRequestHeader("Content-length", param.length);
 			xmlhttp.setRequestHeader("Connection", "close");
 			xmlhttp.send(param);
-			window.location.href="page-admin.php";
 		}
 		function ApprovePengaduan(id_pengaduan){
+			alert('approve'+id_pengaduan);
 			var xmlhttp=GetXmlHttpObject();
 			if(xmlhttp==null){
 				alert("Silahkan gunakan browser yang mendukung AJAX");
@@ -142,6 +144,7 @@
 			kirimEmail(id_pengaduan);
 		}
 		function kirimEmail(id_pengaduan){
+			alert('kirim'+id_pengaduan);
 			var xmlhttp=GetXmlHttpObject();
 			if(xmlhttp==null){
 				alert("Silahkan gunakan browser yang mendukung AJAX");
@@ -160,6 +163,7 @@
 			var arrayPengaduan = [];
 			for(var i=0, n=checkboxes.length; i<n;i++){
 				if(checkboxes[i].checked){
+					//alert(checkboxes[i].value);
 					arrayPengaduan.push(checkboxes[i].value);
 				}
 			}
