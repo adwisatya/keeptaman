@@ -86,7 +86,7 @@
 						<input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Edit" onClick="window.location.href = \'edit-taman.php?id='.$taman['id_taman'].'\';">
 					</td>
 					<td>
-						 <input type="Submit" class="btn btn-primary btn-sm btn-primary delete" value="Delete">
+						 <input type="Submit" class="btn btn-primary btn-sm btn-primary delete" value="Delete" onClick="HapusTaman(\''.$taman['id_taman'].'\');">
 					</td>
 				 </tr>';
 				 $index++;

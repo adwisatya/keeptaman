@@ -16,7 +16,6 @@
 			var idadmin = document.getElementById('idadmin').value;
 			//var idadmin = document.getElementById('idadmin').value;
 			var id_taman = idadmin.length*100+nama.length*10+alamat.length;
-			alert('id_taman');
 			var xmlhttp=GetXmlHttpObject();
 			if(xmlhttp==null){
 				alert("Silahkan gunakan browser yang mendukung AJAX");
@@ -62,8 +61,8 @@
 			alert('Data taman telah diupdate');
 			window.location.href = "edit-taman.php?id="+id_taman;
 		}
-		function HapusTaman(){
-			var id_taman = document.getElementById('id_taman').value;
+		function HapusTaman(id_tamanx){
+			var id_taman = id_tamanx;
 			var xmlhttp=GetXmlHttpObject();
 			if(xmlhttp==null){
 				alert("Silahkan gunakan browser yang mendukung AJAX");
@@ -76,6 +75,7 @@
 			xmlhttp.setRequestHeader("Content-length", param.length);
 			xmlhttp.setRequestHeader("Connection", "close");
 			xmlhttp.send(param);
+			window.location.href="list-taman.php";
 		}
 		function GetXmlHttpObject() {
 			var xmlhttp=null;
