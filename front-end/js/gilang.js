@@ -20,11 +20,16 @@ $("#submit_pengaduan").click(function(){
 			alert("error submit pengaduan");
 		}
 	});
+	var txt = "";
+	document.getElementById("name").value = txt;
+	document.getElementById("email").value = txt;
+	document.getElementById("subjek").value = txt;
+	document.getElementById("isi").value = txt;
 });
 
 $.ajax({
 	type: "GET",
-	url: "../admin/taman.php",
+	url: "../admin/taman.php?command=7",
 	success: function(data){
 		$("#nama-taman").html(data);
 		jQuery('#nama-taman p').click(function(){

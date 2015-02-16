@@ -45,6 +45,27 @@
 						}
 					}
 					break;
+			case 6:  $data =	mysql_query("SELECT * from taman");
+					if(mysql_num_rows($data)>0){
+						$index = 0;
+						echo '<select class="form-control input-sm">';
+						echo '<option value="-1">Semua Taman</option>';
+						while($user= mysql_fetch_array($data)){
+							echo '<option value="'.$index.'">'.$user['nama_taman'].'</option>
+							';
+							$index++;
+						}
+						echo '</select>';
+					}
+					break;
+			case 7: $data	=	mysql_query("SELECT * from taman");
+			 		if(mysql_num_rows($data)>0){
+						while($user= mysql_fetch_array($data)){
+							echo '<p id="taman'.$user['id_taman'].'">'.$user['nama_taman'].'</p>
+							';
+						}
+					}
+					break;
 			default:
 				echo "Command not found";
 				break;
