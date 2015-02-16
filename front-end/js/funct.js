@@ -13,9 +13,10 @@
 			var nama = document.getElementById('nama_taman').value;
 			var alamat = document.getElementById('alamat').value;
 			var geolokasi = document.getElementById('geolokasi').value;
-			var idadmin = "admin";
+			var idadmin = document.getElementById('idadmin').value;
 			//var idadmin = document.getElementById('idadmin').value;
-			var id_taman = 123232;
+			var id_taman = idadmin.length*100+nama.length*10+alamat.length;
+			alert('id_taman');
 			var xmlhttp=GetXmlHttpObject();
 			if(xmlhttp==null){
 				alert("Silahkan gunakan browser yang mendukung AJAX");
@@ -32,7 +33,8 @@
 			xmlhttp.setRequestHeader("Content-length", param.length);
 			xmlhttp.setRequestHeader("Connection", "close");
 			xmlhttp.send(param);
-			alert('selesai');
+			alert('Penambahan Taman Berhasil');
+			window.location.href= "list-taman.php";
 		}
 		function UpdateTaman(){
 			var nama = document.getElementById('nama_taman').value;
