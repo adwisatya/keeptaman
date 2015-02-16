@@ -32,7 +32,7 @@
 							<input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Edit" onClick="window.location.href = \'edit-user.php?id='.$user['username'].'\';">
 						</td>
 						<td>
-							 <input type="Submit" class="btn btn-primary btn-sm btn-primary delete" value="Delete">
+							 <input type="Submit" class="btn btn-primary btn-sm btn-primary delete" value="Delete" onClick="HapusUser(\''.$user['username'].'\');">
 						</td>
 					 </tr>';
 					 $index++;
