@@ -104,8 +104,8 @@
 								$data =	mysql_query("SELECT * from admin WHERE username = '".$_GET['id']."'");
 								while($admin= mysql_fetch_array($data)){
 								echo '<tr>
-										<td><label id="name">'.$admin['name'].'</label></td>
-										<td><input type="text" id="username" value="'.$admin['username'].'"></td>
+										<td><label id="username">'.$admin['username'].'</label></td>
+										<td><input type="text" id="name" value="'.$admin['name'].'"></td>
 										<td><input type="text" id="email" value="'.$admin['email'].'"></td>
 										<td><input type="text" id="password" value="'.$admin['password'].'">
 										</td>
@@ -128,7 +128,7 @@
                         </select>
                         </div> -->
                         <div class="form-group">
-                            <input type="submit" class="btn btn-primary btn-sm btn-primary add" value="+ Tambah Taman">
+                            <input type="submit" class="btn btn-primary btn-sm btn-primary add" value="+ Tambah User" >
                         </div>
                     </form>
                      </div>

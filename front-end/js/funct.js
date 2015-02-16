@@ -97,6 +97,9 @@
 		function show_add_taman(){
 			 document.getElementById("tambah_taman").style = "display";
 		}
+		function tampilkan_form_add_user(){
+			 document.getElementById("form_tambah_user").style = "display";
+		}
 		function getAksiPengaduan(){
 			var action = document.getElementById('aksi').value;
 			var arrayPengaduan = getCheckedList();
@@ -111,4 +114,27 @@
 				}
 			}
 			return arrayPengaduan;
+		}
+		function UpdateUser(){
+			var nama = document.getElementById('name').value;
+			var username = document.getElementById('username').innerHTML;
+			var email = document.getElementById('email').value;
+			var password = document.getElementById('password').value;
+			var xmlhttp=GetXmlHttpObject();
+			if(xmlhttp==null){
+				alert("Silahkan gunakan browser yang mendukung AJAX");
+				return;
+			}	
+			var url	=	"../admin/user.php?command=2";
+			var param = "username="+username+
+				"&password="+password+
+				"&name="+nama+
+				"&email="+email;
+			xmlhttp.open("POST",url,true);
+			xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			xmlhttp.setRequestHeader("Content-length", param.length);
+			xmlhttp.setRequestHeader("Connection", "close");
+			xmlhttp.send(param);
+			alert('Data user telah diupdate');
+			window.location.href = "edit-user.php?id="+username;
 		}
