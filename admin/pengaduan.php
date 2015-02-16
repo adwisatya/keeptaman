@@ -46,7 +46,7 @@
                             <td>'.$data['isi'].'</td>
                             <td>'.$data['nama_pelapor'].'</td>
                             <td>
-                                <input type="checkbox" name="id_pengaduan" id="id_pengaduan" value="'.$data['id_pengaduan'].'">
+                                <input type="checkbox" name="checked_id_pengaduan" value="'.$data['id_pengaduan'].'">
                             </td>
                          </tr>
 				';

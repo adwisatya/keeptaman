@@ -107,13 +107,13 @@
                     <div class="row">
                         <form class="form-inline" id="form-button">
                         <div class="form-group">
-                        <select class="form-control input-sm">
-                            <option value="volvo">Approve</option>
-                            <option value="saab">Ignore</option>
+                        <select class="form-control input-sm"  name="aksi" id="aksi" >
+                            <option value="1">Approve</option>
+                            <option value="9">Ignore</option>
                         </select>
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="btn btn-primary btn-sm btn-primary go" value="GO">
+                            <input onClick="getCheckedList();" type="submit" class="btn btn-primary btn-sm btn-primary go" value="GO">
                         </div>
                     </form>
                      </div>
@@ -208,7 +208,9 @@
         });
     });
     </script>
-
+	<script src="js/funct.js">
+	
+	</script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
