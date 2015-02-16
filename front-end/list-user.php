@@ -101,20 +101,20 @@
 						<?php
 							include('../admin/user.php');
 						?>
-                         <!--<tr name="tambah_taman" style="display">
+                         <tr id="form_tambah_user" style="display:none">
                             <td></td>
-                            <td><input type="text" id="nama_taman" value="aryya"></td>
+                            <td><input type="text" id="nama_taman" value=""></td>
                             <td><input type="text" id="alamat"></td>
                             <td><input type="text" id="geolokasi"></td>
-                            <td colspan="2">
-                                <input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="tambah" onClick="cekInputan();">
+							<td>
+                                <input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Tambah User" onClick="tambahUser();">
                             </td>
-                        </tr>-->
+                        </tr>
                     </table>
                     <div class="row">
                         <form class="form-inline" id="form-button">
                         <div class="form-group">
-                            <a href="#tambah-user"class="portfolio-link" data-toggle="modal"><input type="submit" class="btn btn-primary btn-sm btn-primary add" value="+ Tambah User"></a>
+                            <input onClick="tampilkan_form_add_user();" type="submit" class="btn btn-primary btn-sm btn-primary add" value="+ Tambah User" ></a>
                         </div>
                     </form>
                      </div>
@@ -122,81 +122,6 @@
             </div>
         </div>
     </header>
-
-
-        <div class="container" id="manajemen-taman">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 id="font">Manajemen Taman</h2>
-                    <hr class="star-primary">
-                </div>
-                <div class="col-lg-12">
-                    <table class="table table-hover table-bordered">
-                        <tr>
-                            <th>Id</th>
-                            <th>Nama Taman</th>
-                            <th>Alamat</th>
-                            <th>Geolokasi</th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Taman A</td>
-                            <td>jalan A</td>
-                            <td>00001111</td>
-                            <td>
-                                <input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Edit">
-                            </td>
-                            <td>
-                                 <input type="Submit" class="btn btn-primary btn-sm btn-primary delete" value="Delete">
-                            </td>
-                         </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Taman A</td>
-                            <td>jalan A</td>
-                            <td>00001111</td>
-                            <td>
-                                <input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Edit">
-                            </td>
-                            <td>
-                                 <input type="Submit" class="btn btn-primary btn-sm btn-primary delete" value="Delete">
-                            </td>
-                         </tr>
-                         <tr>
-                            <td>1</td>
-                            <td>Taman A</td>
-                            <td>jalan A</td>
-                            <td>00001111</td>
-                            <td>
-                                <input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Edit">
-                            </td>
-                            <td>
-                                 <input type="Submit" class="btn btn-primary btn-sm btn-primary delete" value="Delete">
-                            </td>
-                         </tr>
-                         <!--<tr name="tambah_taman" style="display">
-                            <td></td>
-                            <td><input type="text" id="nama_taman" value="aryya"></td>
-                            <td><input type="text" id="alamat"></td>
-                            <td><input type="text" id="geolokasi"></td>
-                            <td colspan="2">
-                                <input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="tambah" onClick="cekInputan();">
-                            </td>
-                        </tr>-->
-                    </table>
-                    <div class="row">
-                        <form class="form-inline" id="form-button">
-                        <div class="form-group">
-                            <a href="#tambah-taman"class="portfolio-link" data-toggle="modal"><input type="submit" class="btn btn-primary btn-sm btn-primary add" value="+ Tambah Taman"></a>
-                        </div>
-                    </form>
-                     </div>
-                </div>
-            </div>
-        </div>
-
 
     <!-- Footer -->
     <footer class="text-center">

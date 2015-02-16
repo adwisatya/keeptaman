@@ -108,12 +108,19 @@
                             <td><input type="text" id="geolokasi"></td>
                             <td>
 								<select id="idadmin">
-									<option value="admin">ss</option>
+								<?php
+									include("../connect.php");
+									$query = mysql_query("SELECT username from admin");
+									while($admin = mysql_fetch_array($query)){
+										echo '<option value="'.$admin['username'].'">'.$admin['username'].'</option>';
+									}
+								?>
+									
 								</select>
 							</td>
 							<td>
                                 <input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Tambah Taman" onClick="initPost();">
-								<input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Hapus Taman" onClick="HapusTaman();">
+			
                             </td>
                         </tr>
                     </table>

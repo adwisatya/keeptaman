@@ -12,6 +12,7 @@
 		//}
 		switch($_GET['command']){
 			case 0 : $data = mysql_query("INSERT INTO taman (`id_taman`, `nama_taman`, `alamat`, `geolokasi`, `username_admin`) VALUES ('$id_taman', '$nama_taman','$alamat','$geolokasi','$username_admin');");
+					echo "alert('masuk taman')";
 					break;
 			case 1 : $data = mysql_query("DELETE FROM taman WHERE `id_taman` = '$id_taman'");
 					break;
@@ -85,7 +86,7 @@
 						<input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Edit" onClick="window.location.href = \'edit-taman.php?id='.$taman['id_taman'].'\';">
 					</td>
 					<td>
-						 <input type="Submit" class="btn btn-primary btn-sm btn-primary delete" value="Delete">
+						 <input type="Submit" class="btn btn-primary btn-sm btn-primary delete" value="Delete" onClick="HapusTaman(\''.$taman['id_taman'].'\');">
 					</td>
 				 </tr>';
 				 $index++;
