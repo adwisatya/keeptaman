@@ -1,10 +1,13 @@
 Taman:
 Update taman
 Tambah Taman
+add
+delte
 
 User:
 list user
 edit user (belum koneksi ke database)
+add delete
 
 Pengaduan
-Lis pengaduan terverifikasi
+List pengaduan terverifikasi
