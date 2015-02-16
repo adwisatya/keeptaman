@@ -98,45 +98,12 @@
                             <th></th>
                             <th></th>
                         </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Taman A</td>
-                            <td>jalan A</td>
-                            <td>00001111</td>
-                            <td>
-                                <input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Edit">
-                            </td>
-                            <td>
-                                 <input type="Submit" class="btn btn-primary btn-sm btn-primary delete" value="Delete">
-                            </td>
-                         </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Taman A</td>
-                            <td>jalan A</td>
-                            <td>00001111</td>
-                            <td>
-                                <input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Edit">
-                            </td>
-                            <td>
-                                 <input type="Submit" class="btn btn-primary btn-sm btn-primary delete" value="Delete">
-                            </td>
-                         </tr>
-                         <tr>
-                            <td>1</td>
-                            <td>Taman A</td>
-                            <td>jalan A</td>
-                            <td>00001111</td>
-                            <td>
-                                <input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Edit">
-                            </td>
-                            <td>
-                                 <input type="Submit" class="btn btn-primary btn-sm btn-primary delete" value="Delete">
-                            </td>
-                         </tr>
-                         <tr name="tambah_taman" style="display">
+						<?php
+							include('../admin/taman.php');
+						?>
+                         <tr id="tambah_taman" style="display:none">
                             <td></td>
-                            <td><input type="text" id="nama_taman" value="aryya"></td>
+                            <td><input type="text" id="nama_taman" value=""></td>
                             <td><input type="text" id="alamat"></td>
                             <td><input type="text" id="geolokasi"></td>
                             <td>
@@ -145,8 +112,8 @@
 								</select>
 							</td>
 							<td>
-                                <input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="tambah" onClick="initPost();">
-								<input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="tambah" onClick="HapusTaman();">
+                                <input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Tambah Taman" onClick="initPost();">
+								<input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Hapus Taman" onClick="HapusTaman();">
                             </td>
                         </tr>
                     </table>
@@ -159,7 +126,7 @@
                         </select>
                         </div> -->
                         <div class="form-group">
-                            <input type="submit" class="btn btn-primary btn-sm btn-primary add" value="+ Tambah Taman">
+                            <input type="submit" class="btn btn-primary btn-sm btn-primary add" value="+ Tambah Taman" onClick="show_add_taman();">
                         </div>
                     </form>
                      </div>
@@ -255,75 +222,8 @@
     });
 
     </script>
-	<script>
-		function initPost(){
-			var nama = document.getElementById('nama_taman').value;
-			var alamat = document.getElementById('alamat').value;
-			var geolokasi = document.getElementById('geolokasi').value;
-			var idadmin = document.getElementById('idadmin').value;
-			if(nama && alamat && geolokasi && idadmin){
-				TambahTaman();
-			}else{
-				alert('isi dengan benar');
-			}
-		}
-		function TambahTaman(){
-			var nama = document.getElementById('nama_taman').value;
-			var alamat = document.getElementById('alamat').value;
-			var geolokasi = document.getElementById('geolokasi').value;
-			var idadmin = "admin";
-			//var idadmin = document.getElementById('idadmin').value;
-			var id_taman = 123232;
-			var xmlhttp=GetXmlHttpObject();
-			if(xmlhttp==null){
-				alert("Silahkan gunakan browser yang mendukung AJAX");
-				return;
-			}	
-			var url	=	"../admin/taman.php?command=0";
-			var param = "id_taman="+id_taman+
-				"&nama"+nama+
-				"&alamat"+alamat+
-				"&geolokasi"+geolokasi+
-				"&idadmin"+idadmin;
-			xmlhttp.open("POST",url,true);
-			xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-			xmlhttp.setRequestHeader("Content-length", param.length);
-			xmlhttp.setRequestHeader("Connection", "close");
-			xmlhttp.send(param);
-			alert('selesai');
-		}
-		function HapusTaman(){
-			var id_taman = document.getElementById('id_taman').value;
-			var xmlhttp=GetXmlHttpObject();
-			if(xmlhttp==null){
-				alert("Silahkan gunakan browser yang mendukung AJAX");
-				return;
-			}	
-			var url	=	"../admin/taman.php?command=1";
-			var param = "id_taman="+id_taman;
-			xmlhttp.open("POST",url,true);
-			xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-			xmlhttp.setRequestHeader("Content-length", param.length);
-			xmlhttp.setRequestHeader("Connection", "close");
-			xmlhttp.send(param);
-		}
-		function GetXmlHttpObject() {
-			var xmlhttp=null;
-			try {
-				// Firefox, Opera 8.0+, Safari
-				xmlhttp=new XMLHttpRequest();
-			}
-			catch (e) {
-				// Internet Explorer
-				try {
-					xmlhttp=new ActiveXObject("Msxml2.XMLHTTP");
-				}
-				catch (e) {
-					xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-				}
-			}
-			return xmlhttp;
-		}
+	<script src="js/funct.js">
+	
 	</script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>

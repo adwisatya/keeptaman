@@ -65,24 +65,22 @@
 	}else{
 		$data	=	mysql_query("SELECT * from taman");
 		if(mysql_num_rows($data)>0){
-			while($user= mysql_fetch_array($data)){
-//<<<<<<< HEAD
-				echo '<p id="taman'.$user['id_taman'].'">'.$user['nama_taman'].'</p>
-				';
-//=======
-		/*	echo
-				'<td></td>
-				<td><?php $user['nama_taman']; ?></td>
-				<td><?php $user['alamat']; ?></td>
-				<td><?php $user['geolokasi']; ?></td>
-				<td>
-					<input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Edit">
-				</td>
-				<td>
-					 <input type="Submit" class="btn btn-primary btn-sm btn-primary delete" value="Delete">
-				</td>'
-		*/
-//>>>>>>> 1690afdc88a82dbf5234cf70e05d87d570234a57
+
+			$index = 1;
+			while($taman= mysql_fetch_array($data)){
+			echo '<tr>
+					<td>'.$index.'</td>
+					<td>'.$taman['nama_taman'].'</td>
+					<td>'.$taman['alamat'].'</td>
+					<td>'.$taman['geolokasi'].'</td>
+					<td>
+						<input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Edit" onClick="window.location.href = \'edit-taman.php?id='.$taman['id_taman'].'\';">
+					</td>
+					<td>
+						 <input type="Submit" class="btn btn-primary btn-sm btn-primary delete" value="Delete">
+					</td>
+				 </tr>';
+				 $index++;
 			}
 		}else{
 			echo "Tidak ada data";
