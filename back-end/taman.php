@@ -59,10 +59,12 @@
 					}
 					break;
 			case 7: $data	=	mysql_query("SELECT * from taman");
+					$index = 0;
 			 		if(mysql_num_rows($data)>0){
 						while($user= mysql_fetch_array($data)){
-							echo '<p id="taman'.$user['id_taman'].'">'.$user['nama_taman'].'</p>
+							echo '<p id="taman'.$index.'">'.$user['nama_taman'].'</p>
 							';
+							$index++;
 						}
 					}
 					break;

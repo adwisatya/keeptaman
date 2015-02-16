@@ -36,11 +36,13 @@ $.ajax({
 	url: "../back-end/taman.php?command=7",
 	success: function(data){
 		$("#nama-taman").html(data);
+		$("#list-taman img").hide();
+        $("#nama-taman p").css("background-color", "#90b973");
+		$("#gambar-statistik0").show();
+        $("#taman0").css("background-color", "#2f7e61");
 		jQuery('#nama-taman p').click(function(){
-          var jumTaman = 16;
           var str = "" + this.id;
           var id = str.substr(5,5);
-          //alert(str.substr(5,5));
           $("#list-taman img").hide();
           $("#nama-taman p").css("background-color", "#90b973");
           $("#gambar-statistik"+id).show();
@@ -73,5 +75,24 @@ $.ajax({
 	url: "../back-end/taman.php?command=5",
 	success: function(data){
 		$("#var-id-taman-div").html(data);
+	}
+})
+
+$.ajax({
+	type: "GET",
+	url: "../back-end/pengaduan.php?command=13",
+	success: function(data){
+		$("#list-pengaduan").html(data);
+		$(".pengaduan").click(function(){
+			var mydata = 'id_pengaduan=' + $(this).attr('id');
+			$.ajax({
+				type: "POST",
+				url: "../back-end/pengaduan.php?command=5",
+				data: mydata,
+				success: function(data){
+					$(".modal-body").html(data);
+				}
+			})	
+		})
 	}
 })
