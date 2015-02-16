@@ -91,27 +91,26 @@
                 <div class="col-lg-12">
                     <table class="table table-hover table-bordered">
                         <tr>
-                            <th>Id</th>
-                            <th>Nama Taman</th>
-                            <th>Alamat</th>
-                            <th>Geolokasi</th>
+                            <th>Username</th>
+                            <th>Nama</th>
+                            <th>Email</th>
+                            <th>Password</th>
                             <th></th>
                             <th></th>
                         </tr>
                         <?php
 							if(isset($_GET['id'])){
 								include("../connect.php");
-								$data =	mysql_query("SELECT * from taman WHERE id_taman = '".$_GET['id']."'");
-								while($taman= mysql_fetch_array($data)){
+								$data =	mysql_query("SELECT * from admin WHERE username = '".$_GET['id']."'");
+								while($admin= mysql_fetch_array($data)){
 								echo '<tr>
-										<td><label id="id_taman">'.$taman['id_taman'].'</label></td>
-										<td><input type="text" id="nama_taman" value="'.$taman['nama_taman'].'"></td>
-										<td><input type="text" id="alamat" value="'.$taman['alamat'].'"></td>
-										<td><input type="text" id="geolokasi" value="'.$taman['geolokasi'].'">
-											<input type="hidden" id="idadmin" value="'.$taman['username_admin'].'">
+										<td><label id="name">'.$admin['name'].'</label></td>
+										<td><input type="text" id="username" value="'.$admin['username'].'"></td>
+										<td><input type="text" id="email" value="'.$admin['email'].'"></td>
+										<td><input type="text" id="password" value="'.$admin['password'].'">
 										</td>
 										<td colspan="2">
-											<input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Simpan" onClick="UpdateTaman();">
+											<input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Simpan" onClick="UpdateUser();">
 										</td>
 									 </tr>';
 								}
