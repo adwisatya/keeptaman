@@ -73,12 +73,13 @@ header img {
 
 .map {
 	float: left;
-	margin-left: 150px;
 }
+
 
 #location {
 	width: 100px;
-	height: 500px;
+	height: 450px;
+	margin-left: 40px;
 }
 
 #icon-location {
@@ -91,8 +92,11 @@ header img {
 }
 
 #google-map {
-	width: 500px;
-	height: 400px;
+	width: 750px;
+	height: 450px;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	margin-left: 180px;
 }
 
 section.success {
@@ -200,6 +204,16 @@ a:link {
 	margin-top: 50px;
 }
 
+#halaman-map {
+	padding-bottom: 0;
+}
+
+#text-peta p{
+	color: #2f7e61;
+	font-size: 12px;
+	margin-left: 620px;
+}
+
 /* Filter Pengaduan */
 
 #filter-option {
@@ -227,6 +241,10 @@ a:link {
 
 .div-filter {
 	padding-top: 0;
+}
+
+#filter-option p{
+	color: #000;
 }
 
 /* ADD PENGADUAN */
