@@ -99,7 +99,7 @@
                             <th></th>
                         </tr>
 						<?php
-							include('../admin/taman.php');
+							include('../admin/taman-aryya.php');
 						?>
                          <tr id="tambah_taman" style="display:none">
                             <td></td>
