@@ -104,12 +104,12 @@
 								$data =	mysql_query("SELECT * from taman WHERE id_taman = '".$_GET['id']."'");
 								while($taman= mysql_fetch_array($data)){
 								echo '<tr>
-										<td>'.$taman['id_taman'].'</td>
+										<td><label id="id_taman">'.$taman['id_taman'].'</label></td>
 										<td><input type="text" id="nama_taman" value="'.$taman['nama_taman'].'"></td>
 										<td><input type="text" id="alamat" value="'.$taman['alamat'].'"></td>
 										<td><input type="text" id="geolokasi" value="'.$taman['geolokasi'].'"></td>
 										<td colspan="2">
-											<input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Simpan" onClick="alert(\'simpan\');">
+											<input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Simpan" onClick="UpdateTaman();">
 										</td>
 									 </tr>';
 								}
@@ -117,7 +117,6 @@
 								echo "alert('masukkan id')";
 							}
 						?>
-
                     </table>
                     <div class="row">
                         <form class="form-inline" id="form-button">

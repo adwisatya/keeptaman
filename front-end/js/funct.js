@@ -23,16 +23,43 @@
 			}	
 			var url	=	"../admin/taman.php?command=0";
 			var param = "id_taman="+id_taman+
-				"&nama"+nama+
-				"&alamat"+alamat+
-				"&geolokasi"+geolokasi+
-				"&idadmin"+idadmin;
+				"&nama="+nama+
+				"&alamat="+alamat+
+				"&geolokasi="+geolokasi+
+				"&idadmin="+idadmin;
 			xmlhttp.open("POST",url,true);
 			xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 			xmlhttp.setRequestHeader("Content-length", param.length);
 			xmlhttp.setRequestHeader("Connection", "close");
 			xmlhttp.send(param);
 			alert('selesai');
+		}
+		function UpdateTaman(){
+			var nama = document.getElementById('nama_taman').value;
+			var alamat = document.getElementById('alamat').value;
+			var geolokasi = document.getElementById('geolokasi').value;
+			var idadmin = "admin2";
+			//var idadmin = document.getElementById('idadmin').value;
+			var id_taman = document.getElementById('id_taman').innerHTML;
+			var xmlhttp=GetXmlHttpObject();
+			if(xmlhttp==null){
+				alert("Silahkan gunakan browser yang mendukung AJAX");
+				return;
+			}	
+			var url	=	"../admin/taman.php?command=2";
+			var param = "id_taman="+id_taman+
+				"&nama="+nama+
+				"&alamat="+alamat+
+				"&geolokasi="+geolokasi+
+				"&idadmin="+idadmin;
+				alert(param);
+			xmlhttp.open("POST",url,true);
+			xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			xmlhttp.setRequestHeader("Content-length", param.length);
+			xmlhttp.setRequestHeader("Connection", "close");
+			xmlhttp.send(param);
+			alert('Data taman telah diupdate');
+			window.location.href = "edit-taman.php?id="+id_taman;
 		}
 		function HapusTaman(){
 			var id_taman = document.getElementById('id_taman').value;
