@@ -1,6 +1,6 @@
 @font-face {
-    font-family: BebasNeue;
-    src: url(BebasNeue.otf);
+    font-family: 'BebasNeue';
+    src: url("../fonts/BebasNeue.otf");
 }
 
 body {
@@ -11,6 +11,11 @@ body {
 	background-color: #90b973;
 	color: #2f7e61;
 }
+
+/*.navbar-brand {
+	font-family: 'BebasNeue';
+	font-size: 32px;
+}*/
 
 a, a:hover, a:focus, a:active, a.active {
 	outline: 0;
@@ -245,6 +250,10 @@ a:link {
 
 #filter-option p{
 	color: #000;
+}
+
+.deskripsi-pengaduan {
+	text-align: left;
 }
 
 /* ADD PENGADUAN */
