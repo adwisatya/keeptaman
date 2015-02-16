@@ -216,7 +216,7 @@ a:link {
 
 /* Filter Pengaduan */
 
-#filter-option {
+.filter-option {
 	float: left;
 	border-color: #2f7e61;
 	border-width: 5px;
