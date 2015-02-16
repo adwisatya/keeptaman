@@ -110,30 +110,6 @@
                                  <input type="Submit" class="btn btn-primary btn-sm btn-primary delete" value="Delete">
                             </td>
                          </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Taman A</td>
-                            <td>jalan A</td>
-                            <td>00001111</td>
-                            <td>
-                                <input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Edit">
-                            </td>
-                            <td>
-                                 <input type="Submit" class="btn btn-primary btn-sm btn-primary delete" value="Delete">
-                            </td>
-                         </tr>
-                         <tr>
-                            <td>1</td>
-                            <td>Taman A</td>
-                            <td>jalan A</td>
-                            <td>00001111</td>
-                            <td>
-                                <input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Edit">
-                            </td>
-                            <td>
-                                 <input type="Submit" class="btn btn-primary btn-sm btn-primary delete" value="Delete">
-                            </td>
-                         </tr>
                          <tr name="tambah_taman" style="display">
                             <td></td>
                             <td><input type="text" id="nama_taman" value="aryya"></td>
@@ -145,8 +121,8 @@
 								</select>
 							</td>
 							<td>
-                                <input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="tambah" onClick="initPost();">
-								<input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="tambah" onClick="HapusTaman();">
+                                <input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Tambah Taman" onClick="initPost();">
+								<input type="Submit" class="btn btn-primary btn-sm btn-primary edit" value="Hapus Taman" onClick="HapusTaman();">
                             </td>
                         </tr>
                     </table>
