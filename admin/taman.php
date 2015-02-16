@@ -58,6 +58,14 @@
 						echo '</select>';
 					}
 					break;
+			case 7: $data	=	mysql_query("SELECT * from taman");
+			 		if(mysql_num_rows($data)>0){
+						while($user= mysql_fetch_array($data)){
+							echo '<p id="taman'.$user['id_taman'].'">'.$user['nama_taman'].'</p>
+							';
+						}
+					}
+					break;
 			default:
 				echo "Command not found";
 				break;

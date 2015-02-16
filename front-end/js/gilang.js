@@ -29,7 +29,7 @@ $("#submit_pengaduan").click(function(){
 
 $.ajax({
 	type: "GET",
-	url: "../admin/taman.php",
+	url: "../admin/taman.php?command=7",
 	success: function(data){
 		$("#nama-taman").html(data);
 		jQuery('#nama-taman p').click(function(){
