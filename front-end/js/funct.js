@@ -153,7 +153,7 @@
 			//var param = "id_pengaduan="+id_pengaduan;
 			xmlhttp.open("GET",url,true);
 			xmlhttp.send();
-			alert(url);
+			//alert(url);
 		}		
 		
 		function getCheckedList(){
