@@ -1,36 +1,42 @@
 <?php
 session_start();
 include("../connect.php");
-if(!isset($_SESSION['login']['status'])){
-	if(isset($_POST['login'])){
-		$username = $_POST['username'];
-		$password = $_POST['password'];
-		if($username && $password){
-			$hasil_query = mysql_fetch_array(mysql_query("SELECT * from admin WHERE username='$username'"));
-			if($hasil_query==NULL){
-				echo "Null";
-			}else{
-				if($password==$hasil_query['password']){
-					$_SESSION['login']['status'] = true;
-					$_SESSION['login']['username'] = $username;
-					header("location: main.php");
-				}else{
-					echo "username password salah";
-				}
-			}
+if(true/*!isset($_SESSION['login']['status'])*/){
+	$username = $_POST['username'];
+	$password = $_POST['password'];
+	if($username && $password){
+		$hasil_query = mysql_fetch_array(mysql_query("SELECT * from admin WHERE username='$username'"));
+		if($hasil_query==NULL){
+			echo '<script>
+						if(confirm("Username atau password salah1") == true){
+							window.location = "../front-end/index.html";
+						}
+				</script>';
 		}else{
-			echo "Isikan username password";
+			if($password==$hasil_query['password']){
+				$_SESSION['login']['status'] = true;
+				$_SESSION['login']['username'] = $username;
+				header("location: ../front-end/page-admin.php");
+			}else{
+				echo '<script>
+						if(confirm("Username atau password salah2") == true){
+							window.location = "../front-end/index.html";
+						}
+				</script>';
+			}
 		}
 	}else{
-		?>
-			<form method="post" action="">
-				<input type="text" name="username">
-				<input type="password" name="password">
-				<input type="submit" name="login">
-			</form>
-		<?php
+		echo '<script>
+						if(confirm("Username atau password salah3") == true){
+							window.location = "../front-end/index.html";
+						}
+				</script>';
 	}
 }else{
-	header("location: main.php");
+	echo '<script>
+						if(confirm("Username atau password salah4") == true){
+							window.location = "../front-end/index.html";
+						}
+				</script>';
 }
 ?>
