@@ -26,8 +26,6 @@
 
 // Include the main TCPDF library (search for installation path).
 require_once('tcpdf_include.php');
-require_once("../../../../connect.php");
-$query =  mysql_query("SELECT * FROM pengaduan");
 
 // create new PDF document
 $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
@@ -78,12 +76,24 @@ $pdf->AddPage();
 // writeHTMLCell($w, $h, $x, $y, $html='', $border=0, $ln=0, $fill=0, $reseth=true, $align='', $autopadding=true)
 
 // create some HTML content
-$html = '
-	<h1>Daftar Pengaduan pada Taman Jomblo</h1>
-';
-
-// output the HTML content
+require_once("../connect.php");
+$result = mysql_query("SELECT * FROM pengaduan");
+$html = '<h1>Daftar Pengaduan Total</h1><br>';
 $pdf->writeHTML($html, true, false, true, false, '');
+
+if(mysql_num_rows($result)>0){
+	$i = 1;
+	while($data = mysql_fetch_array($result)){
+		$pdf->writeHTML("No:$i".
+		"<br>Nama Pelapor:".$data['nama_pelapor'].
+		"<br>Email Pelapor:".$data['email_pelapor'].
+		"<br>Subjek Laporan:".$data['subjek_laporan'].
+		"<br>", true, false, true, false, '');
+		$i++;
+	}
+}
+// output the HTML content
+//$pdf->writeHTML($html, true, false, true, false, '');
 
 // reset pointer to the last page
 $pdf->lastPage();
