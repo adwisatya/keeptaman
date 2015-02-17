@@ -131,18 +131,12 @@ a:link {
 	color: #90b973;
 }
 
-/*#gambar-statistik1, #gambar-statistik2, #gambar-statistik3, #gambar-statistik4, #gambar-statistik5, #gambar-statistik6, #gambar-statistik7, #gambar-statistik8, #gambar-statistik9, #gambar-statistik10, #gambar-statistik11, #gambar-statistik12, #gambar-statistik13, #gambar-statistik14, #gambar-statistik15, #gambar-statistik16 {
-	padding-top: 40px;
-}*/
-
 .list-taman img {
 	padding-top: 40px;
+	width: 460px;
+	height: 360px;
+	margin-left: 50px;
 }
-
-/*#gambar-statistik {
-	padding-top: 40px;
-}*/
-
 
 .list-taman p {/*#taman1, #taman2, #taman3, #taman4, #taman5, #taman6, #taman7, #taman8, #taman9, #taman10, #taman11, #taman12, #taman13, #taman14, #taman15, #taman16{*/
 	border: 5px;
@@ -164,12 +158,6 @@ a:link {
 }
 
 .gambar-statistic {
-	height: 50%;
-	width: 50%;
-	display: none;
-}
-
-#gambar-statistik1 {
 	height: 50%;
 	width: 50%;
 }

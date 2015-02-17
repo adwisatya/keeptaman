@@ -43,7 +43,12 @@
                                 </a>
                             </div>';
 					}
+					echo ' <div class="form-group">
+			                <a href="pengaduan-user.html"><input type="submit" class="btn btn-primary btn-primary btn-sm go" value="See All"></a>
+            				</div>';
 
+				}else{
+					echo 'Belum ada pengaduan';
 				}
 				break;
 			case 5:
@@ -82,7 +87,12 @@
                                 </a>
                             </div>';
 					}
+					echo ' <div class="form-group">
+			                <a href="pengaduan-user.html"><input type="submit" class="btn btn-primary btn-primary btn-sm go" value="See All"></a>
+            				</div>';
 
+				}else{
+					echo 'Belum ada pengaduan';
 				}
 				break;
 			case 7:
@@ -103,7 +113,12 @@
                                 </a>
                             </div>';
 					}
+					echo ' <div class="form-group">
+			                <a href="pengaduan-user.html"><input type="submit" class="btn btn-primary btn-primary btn-sm go" value="See All"></a>
+            				</div>';
 
+				}else{
+					echo 'Belum ada pengaduan';
 				}
 				break;
 			case 8:
@@ -125,7 +140,12 @@
                                 </a>
                             </div>';
 					}
+					echo ' <div class="form-group">
+			                <a href="pengaduan-user.html"><input type="submit" class="btn btn-primary btn-primary btn-sm go" value="See All"></a>
+            				</div>';
 
+				}else{
+					echo 'Belum ada pengaduan';
 				}
 				break;
 			case 9:
@@ -145,7 +165,12 @@
                                 </a>
                             </div>';
 					}
+					echo ' <div class="form-group">
+			                <a href="pengaduan-user.html"><input type="submit" class="btn btn-primary btn-primary btn-sm go" value="See All"></a>
+            				</div>';
 
+				}else{
+					echo 'Belum ada pengaduan';
 				}
 				break;
 			case 10:
@@ -166,7 +191,12 @@
                                 </a>
                             </div>';
 					}
+					echo ' <div class="form-group">
+			                <a href="pengaduan-user.html"><input type="submit" class="btn btn-primary btn-primary btn-sm go" value="See All"></a>
+            				</div>';
 
+				}else{
+					echo 'Belum ada pengaduan';
 				}
 				break;
 			case 11:
@@ -188,7 +218,12 @@
                                 </a>
                             </div>';
 					}
+					echo ' <div class="form-group">
+			                <a href="pengaduan-user.html"><input type="submit" class="btn btn-primary btn-primary btn-sm go" value="See All"></a>
+            				</div>';
 
+				}else{
+					echo 'Belum ada pengaduan';
 				}
 				break;
 			case 12:
@@ -211,7 +246,12 @@
                                 </a>
                             </div>';
 					}
+					echo ' <div class="form-group">
+			                <a href="pengaduan-user.html"><input type="submit" class="btn btn-primary btn-primary btn-sm go" value="See All"></a>
+            				</div>';
 
+				}else{
+					echo 'Belum ada pengaduan';
 				}
 				break;
 			case 13:
@@ -230,7 +270,12 @@
                                 </a>
                             </div>';
 					}
+					echo ' <div class="form-group">
+			                <a href="pengaduan-user.html"><input type="submit" class="btn btn-primary btn-primary btn-sm go" value="See All"></a>
+            				</div>';
 
+				}else{
+					echo 'Belum ada pengaduan';
 				}
 				break;
 			default:

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 16, 2015 at 02:32 PM
+-- Generation Time: Feb 17, 2015 at 06:46 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -57,30 +57,31 @@ CREATE TABLE IF NOT EXISTS `pengaduan` (
   `foto` varchar(100) NOT NULL,
   `status` int(11) NOT NULL,
   `id_admin` varchar(20) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=62 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pengaduan`
 --
 
 INSERT INTO `pengaduan` (`id_pengaduan`, `nama_pelapor`, `email_pelapor`, `id_taman`, `waktu_lapor`, `subjek_laporan`, `isi`, `foto`, `status`, `id_admin`) VALUES
-(43, 'Gilang', 'gilang.9h@gmail.com', 3, '2015-02-19', 'Test Laporan', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'image/cabin.png', 0, ''),
-(44, 'Windy', 'windyameliaa@gmail.com', 4, '2015-01-01', 'Test Laporan 2', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'image/cake.png', 0, ''),
-(46, 'gilang', 'asd@asd.asd', 4, '2015-02-16', 'asdsad', 'asdsadsad', 'image/Capture.PNG', 0, ''),
-(47, 'sajd', 'dsjah@dasjk.asd', 4, '2015-02-16', 'sadas', 'djsakdjas', 'image/Capture.PNG', 0, ''),
-(48, 'sadjsa', 'dsajh@ahdjk.asd', 5, '2015-02-16', 'dsad', 'sadhsakhdkj', 'image/Capture.PNG', 0, ''),
-(49, 'asdjk', 'djskaa@as.asd', 4, '2015-02-16', 'asdsa', 'sajdaksd', 'image/Capture.PNG', 0, ''),
-(50, 'salkdjas', 'lkjdsalk@jsdkal.asd', 5, '2015-02-16', 'dsadas', 'sdadas', 'image/Logo Ganesha.jpg', 0, ''),
-(51, 'dsajd', 'jkhdsakjhd@hjkasd.asd', 3, '2015-02-16', 'dsadsa', 'sadasd', 'image/Logo Ganesha.jpg', 0, ''),
-(52, 'sadjsak', 'kdlsjal@jkldas.asd', 6, '2015-02-16', 'dkslajdkla', 'dsajdkasj', 'image/Logo Ganesha.jpg', 0, ''),
-(53, 'sakjdaks', 'ksjdajd@jkasd.asd', 4, '2015-02-16', 'dskajdkas', 'djsakdjask', 'image/Logo Ganesha.jpg', 0, ''),
-(54, 'djsahd', 'jhdsakj@jkadh.asd', 4, '2015-02-16', 'sadasd', 'dsajdas', 'image/Capture.PNG', 0, ''),
-(55, 'sajdhsa', 'jkdhsakj@jakhd.asd', 4, '2015-02-16', 'sadsa', 'dsadsad', 'image/Capture.PNG', 0, ''),
-(56, 'sad', 'sjdka@JAHSD.ASD', 3, '2015-02-16', 'dsajhd', 'dsajdhsaj', 'image/Capture.PNG', 0, ''),
-(57, 'asjkd', 'kjhdsa@Jkhad.asd', 3, '2015-02-16', 'dskajhdjk', 'asdsad', 'image/Capture.PNG', 0, ''),
-(58, 'dskajdha', 'kjhsa@Kjhasd.asd', 4, '2015-02-16', 'dsajd', 'dsadas', 'image/diagram.png', 0, ''),
-(59, 'sadjhsa', 'kjahsdkj@kajshd.ads', 4, '2015-02-16', 'dsadsad', 'sadsadsa', 'image/diagram2.png', 0, ''),
-(60, 'sakjdsaj', 'jkhsajkd@kjasdh.ads', 4, '2015-02-16', 'sdadasd', 'sadasd', 'image/Capture.PNG', 0, '');
+(43, 'Gilang', 'gilang.9h@gmail.com', 3, '2015-02-19', 'Test Laporan', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'image/taman1.png', 0, ''),
+(44, 'Windy', 'windyameliaa@gmail.com', 4, '2015-01-01', 'Test Laporan 2', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'image/taman2.png', 1, ''),
+(46, 'gilang', 'asd@asd.asd', 4, '2015-02-16', 'asdsad', 'asdsadsad', 'image/taman3.PNG', 0, ''),
+(47, 'sajd', 'dsjah@dasjk.asd', 4, '2015-02-16', 'sadas', 'djsakdjas', 'image/taman4.PNG', 0, ''),
+(48, 'sadjsa', 'dsajh@ahdjk.asd', 5, '2015-02-16', 'dsad', 'sadhsakhdkj', 'image/taman5.png', 0, ''),
+(49, 'asdjk', 'djskaa@as.asd', 4, '2015-02-16', 'asdsa', 'sajdaksd', 'image/taman5.png', 0, ''),
+(50, 'salkdjas', 'lkjdsalk@jsdkal.asd', 5, '2015-02-16', 'dsadas', 'sdadas', 'image/taman6.png', 0, ''),
+(51, 'dsajd', 'jkhdsakjhd@hjkasd.asd', 3, '2015-02-16', 'dsadsa', 'sadasd', 'image/taman6.png', 0, ''),
+(52, 'sadjsak', 'kdlsjal@jkldas.asd', 6, '2015-02-16', 'dkslajdkla', 'dsajdkasj', 'image/taman6.png', 0, ''),
+(53, 'sakjdaks', 'ksjdajd@jkasd.asd', 4, '2015-02-16', 'dskajdkas', 'djsakdjask', 'image/taman6.png', 0, ''),
+(54, 'djsahd', 'jhdsakj@jkadh.asd', 4, '2015-02-16', 'sadasd', 'dsajdas', 'image/taman5.png', 0, ''),
+(55, 'sajdhsa', 'jkdhsakj@jakhd.asd', 4, '2015-02-16', 'sadsa', 'dsadsad', 'image/taman5.png', 0, ''),
+(56, 'sad', 'sjdka@JAHSD.ASD', 3, '2015-02-16', 'dsajhd', 'dsajdhsaj', 'image/taman5.png', 0, ''),
+(57, 'asjkd', 'kjhdsa@Jkhad.asd', 3, '2015-02-16', 'dskajhdjk', 'asdsad', 'image/taman5.png', 0, ''),
+(58, 'dskajdha', 'kjhsa@Kjhasd.asd', 4, '2015-02-16', 'dsajd', 'dsadas', 'image/taman7.png', 0, ''),
+(59, 'sadjhsa', 'kjahsdkj@kajshd.ads', 4, '2015-02-16', 'dsadsad', 'sadsadsa', 'image/taman8.png', 0, ''),
+(60, 'sakjdsaj', 'jkhsajkd@kjasdh.ads', 4, '2015-02-16', 'sdadasd', 'sadasd', 'image/taman5.png', 0, ''),
+(61, 'dsadsaa', 'asdsa@asdas.sad', 6, '2015-02-16', 'dasdas', 'asdsadas', 'image/taman9.png', 1, '');
 
 -- --------------------------------------------------------
 
@@ -172,7 +173,7 @@ ALTER TABLE `taman`
 -- AUTO_INCREMENT for table `pengaduan`
 --
 ALTER TABLE `pengaduan`
-MODIFY `id_pengaduan` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=61;
+MODIFY `id_pengaduan` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=62;
 --
 -- AUTO_INCREMENT for table `pihak_berwenang`
 --

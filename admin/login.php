@@ -8,8 +8,8 @@ if(true/*!isset($_SESSION['login']['status'])*/){
 		$hasil_query = mysql_fetch_array(mysql_query("SELECT * from admin WHERE username='$username'"));
 		if($hasil_query==NULL){
 			echo '<script>
-						if(confirm("Username atau password salah1") == true){
-							window.location = "../front-end/index.html";
+						if(confirm("Username atau password salah") == true){
+							window.location = "../front-end/index.html#contact";
 						}
 				</script>';
 		}else{
@@ -19,23 +19,23 @@ if(true/*!isset($_SESSION['login']['status'])*/){
 				header("location: ../front-end/page-admin.php");
 			}else{
 				echo '<script>
-						if(confirm("Username atau password salah2") == true){
-							window.location = "../front-end/index.html";
+						if(confirm("Username atau password salah") == true){
+							window.location = "../front-end/index.html#contact";
 						}
 				</script>';
 			}
 		}
 	}else{
 		echo '<script>
-						if(confirm("Username atau password salah3") == true){
-							window.location = "../front-end/index.html";
+						if(confirm("Username atau password salah") == true){
+							window.location = "../front-end/index.html#contact";
 						}
 				</script>';
 	}
 }else{
 	echo '<script>
-						if(confirm("Username atau password salah4") == true){
-							window.location = "../front-end/index.html";
+						if(confirm("Username atau password salah") == true){
+							window.location = "../front-end/index.html#contact";
 						}
 				</script>';
 }
