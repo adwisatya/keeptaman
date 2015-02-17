@@ -102,14 +102,66 @@
 		}
 		function getAksiPengaduan(){
 			var action = document.getElementById('aksi').value;
-			var arrayPengaduan = getCheckedList();
-			alert(arrayPengaduan.length);
+			var arrayPengaduan = new Array();
+			arrayPengaduan = getCheckedList();
+			for(var i=0;i<arrayPengaduan.length;i++){
+				if(action==9){
+					DeletePengaduan(arrayPengaduan[i]);
+				}else{
+					ApprovePengaduan(arrayPengaduan[i]);
+				}
+			}
+			alert('pengaduan sudah diproses');
+			window.location.href="page-admin.php";
 		}
+		function DeletePengaduan(id_pengaduan){
+			var xmlhttp=GetXmlHttpObject();
+			if(xmlhttp==null){
+				alert("Silahkan gunakan browser yang mendukung AJAX");
+				return;
+			}	
+			var url	=	"../admin/pengaduan.php?command=3";
+			var param = "id_pengaduan="+id_pengaduan;
+			xmlhttp.open("POST",url,true);
+			xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			xmlhttp.setRequestHeader("Content-length", param.length);
+			xmlhttp.setRequestHeader("Connection", "close");
+			xmlhttp.send(param);
+		}
+		function ApprovePengaduan(id_pengaduan){
+			var xmlhttp=GetXmlHttpObject();
+			if(xmlhttp==null){
+				alert("Silahkan gunakan browser yang mendukung AJAX");
+				return;
+			}	
+			var url	=	"../admin/pengaduan.php?command=5";
+			var param = "id_pengaduan="+id_pengaduan;
+			xmlhttp.open("POST",url,true);
+			xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			xmlhttp.setRequestHeader("Content-length", param.length);
+			xmlhttp.setRequestHeader("Connection", "close");
+			xmlhttp.send(param);
+			kirimEmail(id_pengaduan);
+		}
+		function kirimEmail(id_pengaduan){
+			var xmlhttp=GetXmlHttpObject();
+			if(xmlhttp==null){
+				alert("Silahkan gunakan browser yang mendukung AJAX");
+				return;
+			}	
+			var url	=	"../admin/mail.php?id_pengaduan="+id_pengaduan;
+			//var param = "id_pengaduan="+id_pengaduan;
+			xmlhttp.open("GET",url,true);
+			xmlhttp.send();
+			alert(url);
+		}		
+		
 		function getCheckedList(){
 			var checkboxes = document.getElementsByName('checked_id_pengaduan');
 			var arrayPengaduan = [];
 			for(var i=0, n=checkboxes.length; i<n;i++){
 				if(checkboxes[i].checked){
+					//alert(checkboxes[i].value);
 					arrayPengaduan.push(checkboxes[i].value);
 				}
 			}
